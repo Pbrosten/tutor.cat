@@ -1,36 +1,58 @@
 {% extends "base.html" %}
 {% block title %}{{ g.title }} — Guies{% endblock %}
+{% set lq = "?lang=en" if lang == "en" else "" %}
 {% block content %}
+<div class="guidewrap">
 <article class="guide"{% if lang == "en" %} lang="en"{% endif %}>
 <h1>{{ g.title }}</h1>
 {% if has_en %}<p class="langbar"><small>{% if lang == "en" %}<a href="?">Català</a> · <b>English</b>{% else %}<b>Català</b> · <a href="?lang=en">English</a>{% endif %}</small></p>{% endif %}
-<div class="readbar">
-  <div class="read">
-  {% if not user_of(request) %}
-    <button disabled>Marca com a llegida</button>
-    <small class="muted">Cal un <a href="/perfil">perfil</a> per marcar guies com a llegides.</small>
-  {% elif passed %}
-    <form method="post" action="/guies/{{ g.slug }}/llegida">
-      <button class="{{ 'secondary' if status.read else 'outline' }}">{{ '✓ Llegida — desmarca' if status.read else 'Marca com a llegida' }}</button>
-    </form>
-    <small class="muted">{{ passed.rounds }} sèries superades · millor: {{ passed.best.correct }} / {{ passed.best.n }}</small>
-  {% else %}
-    <button disabled>Marca com a llegida</button>
-    <small class="muted">Primer supera <a href="/exercicis/sessio?guia={{ g.slug }}">{{ pass_rounds }} sèries de {{ pass_n }} exercicis</a> amb {{ pass_score }} encerts o més ({{ rounds }} / {{ pass_rounds }}).</small>
-  {% endif %}
-  </div>
-  {% if next %}
-    {% if status.read %}<a role="button" class="next" href="/guies/{{ next.slug }}{% if lang == "en" %}?lang=en{% endif %}" title="{{ next.title }}">Següent →</a>
-    {% else %}<button class="next" disabled title="{{ next.title }} — es desbloqueja quan marquis aquesta guia com a llegida">Següent →</button>{% endif %}
-  {% else %}<small class="muted next">Última guia del nivell</small>{% endif %}
-</div>
 {{ g.html|safe }}
 </article>
-{% if g.exercises %}
-<section class="practica">
-  <h2>Practica</h2>
-  <a role="button" href="/exercicis/sessio?guia={{ g.slug }}">Sèrie de la guia ({{ pass_n }} ítems)</a>
-  {% for k in g.exercises %}<a role="button" class="outline" href="/exercicis/sessio?tema={{ k }}">{{ topics.get(k, k) }}</a>{% endfor %}
-</section>
-{% endif %}
+<aside class="rail">
+
+  <nav class="guidenav">
+    {% if prev %}<a href="/guies/{{ prev.slug }}{{ lq }}" title="{{ prev.title }}">← Anterior</a>
+    {% else %}<span class="muted">← Anterior</span>{% endif %}
+    {% if next %}
+      {% if status.read %}<a href="/guies/{{ next.slug }}{{ lq }}" title="{{ next.title }}">Següent →</a>
+      {% else %}<span class="muted" title="{{ next.title }} — es desbloqueja quan marquis aquesta guia com a llegida">Següent 🔒</span>{% endif %}
+    {% else %}<span class="muted">Última del nivell</span>{% endif %}
+  </nav>
+
+  <div class="railblock lectura">
+    <b>Lectura</b>
+    {% if not user_of(request) %}
+      <small class="muted">Cal un <a href="/perfil">perfil</a> per marcar guies com a llegides.</small>
+      <button disabled>Marca com a llegida</button>
+    {% else %}
+      <progress value="{{ passed.rounds if passed else rounds }}" max="{{ pass_rounds }}"></progress>
+      {% if passed %}
+        <small class="muted">{{ passed.rounds }} sèries superades · millor: {{ passed.best.correct }} / {{ passed.best.n }}</small>
+        <form method="post" action="/guies/{{ g.slug }}/llegida">
+          <button class="{{ 'secondary' if status.read else 'outline' }}">{{ '✓ Llegida — desmarca' if status.read else 'Marca com a llegida' }}</button>
+        </form>
+      {% else %}
+        <small class="muted">{{ rounds }} / {{ pass_rounds }} sèries · supera <a href="/exercicis/sessio?guia={{ g.slug }}">{{ pass_n }} exercicis</a> amb {{ pass_score }} encerts o més.</small>
+        <button disabled>Marca com a llegida</button>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  {% if g.toc|length > 1 %}
+  <nav class="railblock toc">
+    <b>En aquesta guia</b>
+    <ol>{% for id, heading in g.toc %}<li><a href="#{{ id }}">{{ heading|safe }}</a></li>{% endfor %}</ol>
+  </nav>
+  {% endif %}
+
+  {% if g.exercises %}
+  <section class="railblock practica">
+    <b>Practica</b>
+    <a role="button" href="/exercicis/sessio?guia={{ g.slug }}">Sèrie de la guia ({{ pass_n }} ítems)</a>
+    {% for k in g.exercises %}<a role="button" class="outline" href="/exercicis/sessio?tema={{ k }}">{{ topics.get(k, k) }}</a>{% endfor %}
+  </section>
+  {% endif %}
+
+</aside>
+</div>
 {% endblock %}

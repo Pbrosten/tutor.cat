@@ -98,10 +98,13 @@ def guide_page(request: Request, slug: str, lang: str = "ca"):
         passed = progress.guide_passed(user, slug)
         rounds = len(progress.guide_rounds(user, slug))
     order = content.guide_order()
-    nxt = order[order.index(slug) + 1] if slug in order and order.index(slug) + 1 < len(order) else None
+    i = order.index(slug) if slug in order else -1
+    nxt = order[i + 1] if i >= 0 and i + 1 < len(order) else None
+    prv = order[i - 1] if i > 0 else None
     return templates.TemplateResponse(request, "guia.html", {"g": g, "topics": content.topics(), "status": status, "passed": passed, "rounds": rounds, "pass_rounds": progress.rounds_required(slug),
                                                              "lang": g["lang"], "has_en": content.guide_meta(slug, "en") is not None,
                                                              "next": {"slug": nxt, "title": content.guide_meta(nxt)["title"]} if nxt else None,
+                                                             "prev": {"slug": prv, "title": content.guide_meta(prv)["title"]} if prv else None,
                                                              "pass_n": progress.PASS_MIN_ITEMS, "pass_score": round(progress.PASS_RATIO * progress.PASS_MIN_ITEMS)})
 
 

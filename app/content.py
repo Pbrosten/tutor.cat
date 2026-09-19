@@ -39,7 +39,8 @@ def guide(slug, lang="ca"):
         return None
     body = _guide_path(slug, lang).read_text().split("---", 2)[2]
     body = re.sub(r"\{\{verb (\S+) (\S+)\}\}", lambda m: _verb_table(m[1], m[2]), body)
-    return {**meta, "html": tips.annotate_html(markdown.markdown(body, extensions=["tables"]))}
+    html = tips.annotate_html(markdown.markdown(body, extensions=["tables", "toc"]))  # toc: gives the h2s ids to link to
+    return {**meta, "html": html, "toc": re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', html)}
 
 
 def _verb_table(lemma, key):

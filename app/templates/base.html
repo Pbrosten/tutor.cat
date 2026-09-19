@@ -83,13 +83,20 @@
     article.guide h2 { font-size: 1.35rem; margin-top: 2rem; }
     article.guide table { font-size: .95rem; }
     article.guide blockquote { font-style: italic; }
-    .practica a[role=button] { margin: .25rem .25rem 0 0; }
+    .guidewrap { display: grid; grid-template-columns: minmax(0, 48rem) minmax(15rem, 1fr); gap: 1rem 2.5rem; align-items: start; }
+    .rail { position: sticky; top: 1rem; display: flex; flex-direction: column; gap: 1.25rem; margin-top: 3.5rem; font-size: .9rem; }
+    .rail b { display: block; margin-bottom: .4rem; color: var(--pico-h4-color); font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; }
+    .rail .railblock { padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); }
+    .guidenav { display: flex; justify-content: space-between; gap: .5rem; }
+    .guidenav a { text-decoration: none; } .guidenav .muted { cursor: default; }
+    .rail progress { height: .4rem; margin: 0 0 .25rem; }
+    .rail .lectura form { margin: 0; }
+    .rail .lectura button { width: 100%; margin: .5rem 0 0; padding: .4rem .8rem; font-size: .85rem; }
+    .rail .toc ol { margin: 0; padding-left: 1.1rem; } .rail .toc li { margin: 0 0 .2rem; }
+    .rail .toc a { text-decoration: none; color: var(--pico-muted-color); } .rail .toc a:hover { color: var(--pico-primary); }
+    .rail .practica a[role=button] { display: block; margin: .4rem 0 0; padding: .4rem .8rem; font-size: .85rem; text-align: center; }
+    @media (max-width: 62rem) { .guidewrap { grid-template-columns: 1fr; } .rail { position: static; margin-top: 1rem; } .rail .toc { display: none; } }
     .langbar { margin: -.5rem 0 .75rem; } .langbar a { text-decoration: none; }
-    .readbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem 1rem; margin: 0 0 1.25rem; }
-    .readbar .read { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; }
-    .readbar form { margin: 0; }
-    .readbar button, .readbar a[role=button] { width: auto; margin: 0; padding: .3rem .9rem; }
-    .readbar .next { margin-left: auto; }
     /* guides index: one row per unit */
     section.module { margin-bottom: 1.75rem; }
     section.module h2 { font-size: 1.25rem; margin-bottom: .5rem; }
@@ -151,7 +158,7 @@
 <body>
   <header>
     <nav>
-      <ul><li><a class="brand" href="/">Catalan Helper</a> <span class="tag">B1 · Elemental</span></li></ul>
+      <ul><li><a class="brand" href="/">TUTOR.CAT</a> <span class="tag">B1 · Elemental</span></li></ul>
       <ul>
         {% for href, label in [("/guies", "Guies"), ("/verbs", "Verbs"), ("/exercicis", "Exercicis"), ("/perfil", user_of(request) or "Perfil")] %}
         <li><a href="{{ href }}"{% if request.url.path.startswith(href) %} aria-current="page"{% endif %}>{{ label }}{% if href == "/perfil" and unseen_badges(request) %}<span class="dot" title="Badges nous">{{ unseen_badges(request) }}</span>{% endif %}</a></li>
