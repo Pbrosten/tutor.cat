@@ -1,0 +1,35 @@
+- {type: cloze, text: "No tinc ___ temps. (gaire)", answer: ["gaire"]}
+- {type: cloze, text: "No tinc ___ gana. (incomptable)", answer: ["gens de"]}
+- {type: cloze, text: "No tinc ___ germà. (comptable)", answer: ["cap"]}
+- {type: cloze, text: "Hi ha ___ gent al carrer. (molt, f.)", answer: ["molta"]}
+- {type: cloze, text: "Tens ___ amics a Barcelona? (pregunta)", answer: ["gaires", "molts"]}
+- {type: cloze, text: "Hi ha ___ soroll aquí. (excés)", answer: ["massa"]}
+- {type: cloze, text: "___ dia vaig a la feina en bici. (cada)", answer: ["cada"]}
+- {type: cloze, text: "Ha plogut ___ la nit. (tot)", answer: ["tota"]}
+- {type: cloze, text: "El Pere és ___ alt ___ el Joan. (igualtat)", answer: ["tan / com"], hint: ""}
+- {type: cloze, text: "Tinc ___ feina ___ tu. (igualtat, nom)", answer: ["tanta / com"], hint: "feina és femení"}
+- {type: cloze, text: "Aquest vi és ___ que l'altre. (comparatiu irregular)", answer: ["millor"]}
+- {type: cloze, text: "És la ciutat més gran ___ Catalunya.", answer: ["de"]}
+- {type: cloze, text: "Hi havia més ___ cent persones.", answer: ["de"]}
+- {type: choice, text: "'She works a lot':", options: ["Treballa molt.", "Treballa molta.", "Treballa molts.", "Treballa gaire."], answer: ["Treballa molt."]}
+- {type: choice, text: "'Do you have enough money?':", options: ["Tens prou diners?", "Tens prous diners?", "Tens gens de diners?", "Tens cap diners?"], answer: ["Tens prou diners?"]}
+- {type: choice, text: "'This film is worse':", options: ["Aquesta pel·lícula és pitjor.", "Aquesta pel·lícula és més pitjor.", "Aquesta pel·lícula és més mala.", "Aquesta pel·lícula és menys bona que."], answer: ["Aquesta pel·lícula és pitjor."]}
+- {type: cloze, text: "Hi havia ___ gent a la manifestació. (molt, f.)", answer: ["molta", "força"]}
+- {type: cloze, text: "Tinc ___ diners: no puc pagar-ho. (pocs)", answer: ["pocs"]}
+- {type: cloze, text: "Queda ___ llet? (negació/pregunta, incomptable)", answer: ["gaire", "gens de"]}
+- {type: cloze, text: "No hi ha ___ problema. (cap)", answer: ["cap"]}
+- {type: cloze, text: "___ persones no han vingut. (alguns, f. pl.)", answer: ["Algunes"]}
+- {type: cloze, text: "Hem menjat ___ pastís. (excés)", answer: ["massa"]}
+- {type: cloze, text: "Ja en tinc ___, gràcies. (suficient)", answer: ["prou"]}
+- {type: cloze, text: "___ els nens van venir. (tots)", answer: ["Tots"]}
+- {type: cloze, text: "___ setmana anem al mercat. (cada)", answer: ["Cada"]}
+- {type: cloze, text: "Barcelona és ___ gran ___ Girona. (superioritat)", answer: ["més / que"], hint: ""}
+- {type: cloze, text: "Aquest exercici és ___ difícil ___ l'altre. (inferioritat)", answer: ["menys / que"]}
+- {type: cloze, text: "Parla català ___ bé ___ tu. (igualtat)", answer: ["tan / com"]}
+- {type: cloze, text: "Aquest hotel és ___ que l'altre. (comparatiu irregular)", answer: ["pitjor"]}
+- {type: cloze, text: "És el restaurant ___ car del barri. (superlatiu)", answer: ["més"]}
+- {type: cloze, text: "El pastís és ___! (-íssim)", answer: ["boníssim"]}
+- {type: choice, text: "'I don't have any brothers':", options: ["No tinc cap germà.", "No tinc gens de germans.", "No tinc gaire germà.", "No tinc ningun germà."], answer: ["No tinc cap germà."]}
+- {type: choice, text: "'Do you have much time?':", options: ["Tens gaire temps?", "Tens gens temps?", "Tens cap temps?", "Tens molt temps?"], answer: ["Tens gaire temps?"]}
+- {type: choice, text: "'He eats as much as you':", options: ["Menja tant com tu.", "Menja tan com tu.", "Menja tant que tu.", "Menja tan que tu."], answer: ["Menja tant com tu."]}
+- {type: choice, text: "'the best team in the league':", options: ["el millor equip de la lliga", "el més bo equip de la lliga", "el millor equip en la lliga", "l'equip més millor de la lliga"], answer: ["el millor equip de la lliga"]}

@@ -1,0 +1,34 @@
+# type: cloze (free text, ___ in text) | choice (options) | transform (rewrite whole sentence)
+# answer: list of accepted strings. Checker ignores case, spaces and final punctuation; accents and apostrophes count.
+- {type: cloze, text: "Has llegit el diari? — Sí, ___ he llegit.", answer: ["l'"], hint: "CD masc. sing., davant de vocal"}
+- {type: cloze, text: "Vols les claus? — No, no ___ vull.", answer: ["les"], hint: "CD fem. pl."}
+- {type: cloze, text: "Tens germans? — Sí, ___ tinc dos.", answer: ["en"], hint: "quantitat"}
+- {type: cloze, text: "Vas al cinema aquesta nit? — Sí, ___ vaig amb la Laura.", answer: ["hi"], hint: "lloc"}
+- {type: cloze, text: "Saps que demà és festa? — No, no ___ sabia.", answer: ["ho"], hint: "CD neutre (una oració)"}
+- {type: cloze, text: "Has escrit a la Marta? — Sí, ___ he escrit aquest matí.", answer: ["li"], hint: "CI singular"}
+- {type: cloze, text: "Has enviat el correu als clients? — Sí, ___ he enviat el correu.", answer: ["els"], hint: "CI plural"}
+- {type: cloze, text: "Necessito el cotxe. Me ___ deixes?", answer: ["'l", "l"], hint: "CD masc. darrere de vocal"}
+- {type: cloze, text: "Aquesta sopa és boníssima. Tasta ___!", answer: ["-la"], hint: "CD fem. darrere d'imperatiu"}
+- {type: cloze, text: "Vols més pa? — Sí, posa ___ una mica més.", answer: ["-me'n", "-me'n."], hint: "me + en darrere d'imperatiu"}
+- {type: cloze, text: "On és el Joan? No ___ veig.", answer: ["el"], hint: "CD masc. davant de consonant"}
+- {type: cloze, text: "Véns de la feina? — Sí, ___ vinc ara mateix.", answer: ["en"], hint: "origen (de)"}
+- {type: cloze, text: "Trucaré a la meva mare i ___ diré que vindrem.", answer: ["li"], hint: "CI"}
+- {type: cloze, text: "Vols venir a la festa? Pots portar ___ el teu germà.", answer: ["-hi"], hint: "lloc, darrere d'infinitiu"}
+- {type: cloze, text: "M'agrada aquesta cançó. ___ escolto cada dia.", answer: ["l'"], hint: "CD fem. sing. davant de vocal"}
+- {type: cloze, text: "Aquest matí ___ he llevat a les set.", answer: ["m'"], hint: "reflexiu, davant de vocal"}
+- {type: cloze, text: "Nens, renteu ___ les mans abans de dinar!", answer: ["-vos"], hint: "us darrere d'imperatiu"}
+- {type: choice, text: "Compro el pa cada dia. →", options: ["El compro cada dia.", "Ho compro cada dia.", "En compro cada dia.", "Li compro cada dia."], answer: ["El compro cada dia."]}
+- {type: choice, text: "Compro pa cada dia. →", options: ["El compro cada dia.", "Ho compro cada dia.", "En compro cada dia.", "Hi compro cada dia."], answer: ["En compro cada dia."]}
+- {type: choice, text: "Dono les flors a la Rosa. →", options: ["Li dono les flors.", "La dono les flors.", "Les dono a la Rosa i li.", "Els dono les flors."], answer: ["Li dono les flors."]}
+- {type: choice, text: "Vull comprar la bici. →", options: ["Vull comprar-la.", "Vull comprar-lo.", "Vull la comprar.", "Ho vull comprar."], answer: ["Vull comprar-la."]}
+- {type: choice, text: "No entenc això. →", options: ["No ho entenc.", "No el entenc.", "No l'entenc.", "No en entenc."], answer: ["No ho entenc."]}
+- {type: choice, text: "Vas a Lleida sovint? →", options: ["Hi vaig sovint.", "En vaig sovint.", "Ho vaig sovint.", "La vaig sovint."], answer: ["Hi vaig sovint."]}
+- {type: choice, text: "Obre la porta! →", options: ["Obre-la!", "Obre'l!", "Obre-ho!", "La obre!"], answer: ["Obre-la!"]}
+- {type: choice, text: "Escolta els teus pares! →", options: ["Escolta'ls!", "Escolta-les!", "Escolta-lis!", "Escolta-los!"], answer: ["Escolta'ls!"]}
+- {type: transform, text: "Reescriu amb un pronom: Dono el llibre a la Maria.", answer: ["Li dono el llibre.", "Li dono el llibre"], hint: "substitueix 'a la Maria'"}
+- {type: transform, text: "Reescriu amb un pronom: Vaig veure la Núria ahir.", answer: ["La vaig veure ahir.", "Vaig veure-la ahir."], hint: "substitueix 'la Núria'"}
+- {type: transform, text: "Reescriu amb un pronom: Tinc tres gats.", answer: ["En tinc tres."], hint: "quantitat"}
+- {type: transform, text: "Reescriu amb un pronom: Hem visitat els avis.", answer: ["Els hem visitat.", "Els hem visitats."], hint: "CD masc. pl."}
+- {type: transform, text: "Reescriu amb un pronom: Compra pomes!", answer: ["Compra'n!", "Compra'n"], hint: "en darrere d'imperatiu"}
+- {type: transform, text: "Reescriu amb un pronom: Vull anar a Mallorca.", answer: ["Hi vull anar.", "Vull anar-hi."], hint: "lloc"}
+- {type: transform, text: "Reescriu amb un pronom: No sé la resposta.", answer: ["No la sé."], hint: "CD fem. sing."}

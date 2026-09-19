@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} — Exercicis{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+{% if not user_of(request) %}<p class="muted"><small>Sense perfil no es desa el progrés. <a href="/perfil">Tria un nom</a> per guardar estadístiques.</small></p>{% endif %}
+{% if guia %}<p class="muted"><small>Sèrie de la guia: cal superar-ne {{ pass_rounds }} amb <strong>{{ pass_score }}</strong> encerts o més per marcar-la com a llegida.</small></p>{% endif %}
+<form method="post" action="/exercicis/sessio/corregeix" autocomplete="off">
+<input type="hidden" name="items" value='{{ items|tojson }}'>
+<input type="hidden" name="title" value="{{ title }}">
+<input type="hidden" name="guia" value="{{ guia }}">
+<input type="hidden" name="query" value="{{ query }}">
+<ol class="items">
+{% for it in items %}
+<li><article class="item">
+  <div class="qrow">
+    {% if it.hint %}<details class="hint"><summary>Pista</summary></details>{% endif %}
+    <p class="prompt">{{ it.prompt|number_blanks|verbtips|safe }}</p>
+    {% if it.hint %}<div class="hintbody">{{ it.hint }}</div>{% endif %}
+  </div>
+  {% set i = loop.index0 %}
+  {% set parts = it.prompt.count("___") %}
+  {% if it.options %}
+    <fieldset>{% for o in it.options %}<label><input type="radio" name="given_{{ i }}" value="{{ o }}"> {{ o }}</label>{% endfor %}</fieldset>
+  {% elif parts > 1 %}
+    <div class="parts">{% for j in range(parts) %}<label><span>{{ j + 1 }}</span><input name="given_{{ i }}_{{ j }}" autocapitalize="off" spellcheck="false"></label>{% endfor %}</div>
+  {% else %}
+    <input name="given_{{ i }}" autocapitalize="off" spellcheck="false"{% if it.type == "transform" %} size="40"{% endif %}>
+  {% endif %}
+</article></li>
+{% endfor %}
+</ol>
+<div class="submitbar"><button type="submit">Corregeix la sèrie</button> <a href="/exercicis" class="muted">Cancel·la</a></div>
+</form>
+{% endblock %}

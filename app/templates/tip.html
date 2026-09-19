@@ -1,0 +1,7 @@
+{% for lemma, d in items %}
+<div class="tipverb">
+  <a href="/verbs/{{ lemma }}"><b>{{ lemma }}</b> <small class="muted">→ definició completa</small></a>
+  {% if d.ca %}<ol>{% for x in d.ca[:3] %}<li>{{ x }}</li>{% endfor %}</ol>
+  {% else %}<p class="muted">Sense definició al Viccionari.</p>{% endif %}
+</div>
+{% endfor %}

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Perfil — Catalan Helper{% endblock %}
+{% block content %}
+{% set user = user_of(request) %}
+{% if not user %}
+<hgroup><h1>Perfil</h1><p>Tria un nom per desar el progrés de les guies i les estadístiques dels exercicis. Sense contrasenya: és un servei local.</p></hgroup>
+<div class="grid">
+  {% if users %}<article class="card"><h2>Entra</h2>
+    <form method="post" action="/perfil/entra"><select name="name">{% for u in users %}<option>{{ u }}</option>{% endfor %}</select><button>Entra</button></form>
+  </article>{% endif %}
+  <article class="card"><h2>Nou perfil</h2>
+    <form method="post" action="/perfil/entra"><input name="name" placeholder="nom" maxlength="40" required autofocus><button>Crea</button></form>
+  </article>
+</div>
+{% else %}
+<hgroup><h1>{{ user }}</h1><p>{{ stats.attempts }} respostes · {{ stats.days }} dies de pràctica
+  {% if stats.accuracy is not none %} · {{ (stats.accuracy * 100)|round|int }} % d'encerts{% endif %}
+  · <form method="post" action="/perfil/surt" style="display:inline"><button class="outline" style="width:auto;padding:.1rem .6rem;font-size:.85rem">Surt</button></form></p></hgroup>
+
+<div class="grid">
+  <article class="card">
+    <h2>Guies</h2>
+    <p><strong>{{ guides_read }}</strong> / {{ guides_total }} llegides · {{ guides_seen }} obertes</p>
+    <progress value="{{ guides_read }}" max="{{ guides_total }}"></progress>
+    {% for name, mslugs in by_module %}
+    {% set ns = namespace(n=0) %}{% for s in mslugs if status.get(s, {}).get('read') %}{% set ns.n = ns.n + 1 %}{% endfor %}
+    <details class="module"{% if loop.first %} open{% endif %}>
+      <summary><span>{{ name }}</span><span class="mbar"><progress value="{{ ns.n }}" max="{{ mslugs|length }}"></progress><small class="muted">{{ ns.n }} / {{ mslugs|length }}</small></span></summary>
+      <div class="chips">
+      {% for s in mslugs %}{% set st = 'read' if status.get(s, {}).get('read') else ('seen' if s in status else '') %}
+        <a class="chip {{ st }}" href="/guies/{{ s }}">{% if st == 'read' %}✓ {% elif st == 'seen' %}○ {% endif %}{{ titles[s] }}</a>
+      {% endfor %}
+      </div>
+    </details>
+    {% endfor %}
+  </article>
+
+  <article class="card">
+    <h2>Sèrie personalitzada</h2>
+    {% if weak %}
+      <p>Temes amb menys del 70 % d'encerts: {% for k in weak %}<span class="weak">{{ topics[k] }}</span>{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+      <a role="button" href="/exercicis/sessio?personal=1&n=10">Practica els punts febles</a>
+    {% else %}
+      <p class="muted">Encara no hi ha cap tema amb prou respostes (5) i menys del 70 % d'encerts.</p>
+    {% endif %}
+    <h3 style="font-size:1rem;margin-top:1rem">Desa una sèrie</h3>
+    <form method="post" action="/perfil/sets">
+      <input name="name" placeholder="nom de la sèrie" maxlength="60">
+      <details><summary>Temes{% if weak %} (els febles ja marcats){% endif %}</summary>
+        <fieldset style="columns:2">{% for k, v in topics.items() %}<label><input type="checkbox" name="keys" value="{{ k }}"{% if k in weak %} checked{% endif %}> {{ v }}</label>{% endfor %}</fieldset>
+      </details>
+      <button>Desa</button>
+    </form>
+    {% for s in sets %}
+      <p><a role="button" class="outline" href="/exercicis/sessio?set={{ s.id }}">{{ s.name }}</a>
+         <small class="muted">{% for k in s.topics %}{{ topics.get(k, k) }}{% if not loop.last %}, {% endif %}{% endfor %}</small>
+         <form method="post" action="/perfil/sets/{{ s.id }}/esborra" style="display:inline"><button class="outline" style="width:auto;padding:.1rem .5rem;font-size:.8rem">esborra</button></form></p>
+    {% endfor %}
+  </article>
+</div>
+
+<h2>Badges <small class="muted">{{ badges|selectattr('earned_at')|list|length }} / {{ badges|length }}</small></h2>
+<div class="tabs">
+{% for g in groups %}{% set items = badges|selectattr('group', 'equalto', g)|list %}
+  <input type="radio" name="btab" id="btab{{ loop.index }}"{% if loop.first %} checked{% endif %}>
+  <label for="btab{{ loop.index }}">{{ g }} <small>{{ items|selectattr('earned_at')|list|length }}/{{ items|length }}</small></label>
+{% endfor %}
+{% for g in groups %}
+  <div class="shelf">
+  {% for b in badges if b.group == g %}<span class="badge{% if b.earned_at %} earned{% endif %}" title="{% if b.earned_at %}Aconseguit el {{ b.earned_at[:10] }}{% else %}Pendent{% endif %}">
+    <span class="icon">{{ b.icon }}</span><b>{{ b.name }}</b><small>{{ b.desc }}</small></span>
+  {% endfor %}
+  </div>
+{% endfor %}
+</div>
+
+{% if stats.per_key %}
+<h2>Estadístiques per tema</h2>
+<table class="stats striped">
+  <thead><tr><th>Tema</th><th>Encerts</th><th class="bar"></th><th>Última pràctica</th><th></th></tr></thead>
+  <tbody>{% for r in stats.per_key %}
+  <tr><td>{{ topics.get(r.key, r.key) }}</td><td>{{ r.correct }} / {{ r.attempts }}</td>
+      <td class="bar"><progress value="{{ r.correct }}" max="{{ r.attempts }}"></progress></td>
+      <td><small>{{ r.last[:16].replace('T', ' ') }}</small></td>
+      <td><a href="/exercicis/sessio?tema={{ r.key }}">practica</a></td></tr>
+  {% endfor %}</tbody>
+</table>
+{% endif %}
+
+{% if recent %}
+<details><summary>Últimes respostes</summary>
+<table class="striped"><tbody>{% for r in recent %}
+  <tr><td>{% if r.ok %}<span class="done">✓</span>{% else %}<span class="weak">✗</span>{% endif %}</td><td>{{ r.prompt }}</td><td><em>{{ r.given }}</em></td><td><small class="muted">{{ topics.get(r.key, r.key) }}</small></td></tr>
+{% endfor %}</tbody></table>
+</details>
+{% endif %}
+{% endif %}
+{% endblock %}

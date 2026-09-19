@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    environment:
+      PROGRESS_DB: ${PROGRESS_DB:-}   # leave empty: data/progress.sqlite (persistent)
+      LLM_API_KEY: ${LLM_API_KEY:-}   # optional: Claude-written explanations for wrong answers
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/srv/app
+      - ./content:/srv/content
+      - ./data:/srv/data
+      - ./tests:/srv/tests
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload

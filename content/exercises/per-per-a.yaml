@@ -1,0 +1,32 @@
+- {type: cloze, text: "Aquest regal és ___ tu. (destinatari)", answer: ["per a"]}
+- {type: cloze, text: "Ho faig ___ tu, perquè t'estimo. (a causa de)", answer: ["per"]}
+- {type: cloze, text: "Passem ___ centre de la ciutat. (a través de)", answer: ["pel"]}
+- {type: cloze, text: "El tren ___ Lleida surt a les nou. (destinació)", answer: ["per a"]}
+- {type: cloze, text: "Va comprar el pis ___ 200.000 euros. (preu)", answer: ["per"]}
+- {type: cloze, text: "Estudio ___ aprovar l'examen. (finalitat + infinitiu)", answer: ["per"]}
+- {type: cloze, text: "Una crema ___ les mans. (ús)", answer: ["per a"]}
+- {type: cloze, text: "Envia-m'ho ___ correu electrònic. (mitjà)", answer: ["per"]}
+- {type: cloze, text: "___ mi, aquesta és la millor opció. (opinió)", answer: ["Per a"]}
+- {type: cloze, text: "Un llibre ___ nen. (per a + el)", answer: ["per al"]}
+- {type: cloze, text: "El llibre va ser escrit ___ Mercè Rodoreda. (agent)", answer: ["per"]}
+- {type: cloze, text: "Els deures són ___ dilluns. (termini)", answer: ["per a"]}
+- {type: choice, text: "Pregunta 'per què?':", options: ["Per què plores?", "Perquè plores?", "Per a què plores?", "Per que plores?"], answer: ["Per què plores?"]}
+- {type: choice, text: "'because' (causa):", options: ["No vinc perquè plou.", "No vinc per què plou.", "No vinc per a què plou.", "No vinc per que plou."], answer: ["No vinc perquè plou."]}
+- {type: choice, text: "'It's for you' (regal):", options: ["És per a tu.", "És per tu.", "És pel tu.", "És per de tu."], answer: ["És per a tu."]}
+- {type: cloze, text: "He comprat flors ___ la meva mare. (destinatari)", answer: ["per a"]}
+- {type: cloze, text: "Vam entrar ___ la porta del darrere. (a través de)", answer: ["per"]}
+- {type: cloze, text: "Vinc ___ parlar amb el director. (finalitat + infinitiu)", answer: ["per"]}
+- {type: cloze, text: "Signa ___ mi, si us plau. (en nom de)", answer: ["per"]}
+- {type: cloze, text: "Roba ___ nens. (destinat a)", answer: ["per a"]}
+- {type: cloze, text: "Va tancar la botiga ___ la crisi. (a causa de)", answer: ["per"]}
+- {type: cloze, text: "Parlem ___ telèfon demà. (mitjà)", answer: ["per"]}
+- {type: cloze, text: "L'autobús ___ Sitges surt d'aquí. (destinació)", answer: ["per a"]}
+- {type: cloze, text: "Ho necessito ___ divendres. (termini)", answer: ["per a"]}
+- {type: cloze, text: "Un regal ___ als nens. (per a + els)", answer: ["per als"]}
+- {type: cloze, text: "Ens veiem ___ Nadal. (temps aproximat)", answer: ["per"]}
+- {type: cloze, text: "El sopar encara està ___ fer. (pendent)", answer: ["per"]}
+- {type: cloze, text: "___ nosaltres, la millor opció és el tren. (opinió)", answer: ["Per a"]}
+- {type: choice, text: "'What for?' (finalitat):", options: ["Per a què?", "Per què?", "Perquè?", "Per què a?"], answer: ["Per a què?"]}
+- {type: choice, text: "'so that' (purpose + subjunctive):", options: ["T'ho dic perquè ho sàpigues.", "T'ho dic per què ho sàpigues.", "T'ho dic per a que ho sàpigues.", "T'ho dic per ho sàpigues."], answer: ["T'ho dic perquè ho sàpigues."]}
+- {type: choice, text: "'the reason' (nom):", options: ["el perquè", "el per què", "el per a què", "el perque"], answer: ["el perquè"]}
+- {type: choice, text: "'I did it for you' (a causa teva):", options: ["Ho vaig fer per tu.", "Ho vaig fer per a tu.", "Ho vaig fer pel tu.", "Ho vaig fer per de tu."], answer: ["Ho vaig fer per tu."]}

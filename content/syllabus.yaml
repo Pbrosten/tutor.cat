@@ -1,0 +1,31 @@
+# B1 = CPNL Nivell Elemental (E1/E2/E3), following Passos 2 (2024). 7 units per module.
+# ponytail: unit titles and the topic→unit split are provisional; fill from the book's index.
+# A topic is a guide slug (content/guides/<slug>.md). The guide's front-matter says which exercises it has.
+modules:
+  - name: Elemental 1
+    units:
+      - {n: 1, title: null, topics: [articles-apostrofacio, verbs-present]}
+      - {n: 2, title: null, topics: [genere-nombre, verbs-present]}
+      - {n: 3, title: null, topics: [verbs-passats]}
+      - {n: 4, title: null, topics: [verbs-passats, pronoms-febles]}
+      - {n: 5, title: null, topics: [verbs-futur, perifrasis]}
+      - {n: 6, title: null, topics: [pronoms-febles, demostratius-possessius]}
+      - {n: 7, title: null, topics: [quantitatius-comparatius, hores-dates]}
+  - name: Elemental 2
+    units:
+      - {n: 8, title: null, topics: [verbs-plusquamperfet, verbs-condicional]}
+      - {n: 9, title: null, topics: [verbs-imperatiu, pronoms-febles]}
+      - {n: 10, title: null, topics: [verbs-subjuntiu-present]}
+      - {n: 11, title: null, topics: [verbs-subjuntiu-present, pronoms-combinacions]}
+      - {n: 12, title: null, topics: [pronoms-combinacions, relatius]}
+      - {n: 13, title: null, topics: [subordinades]}
+      - {n: 14, title: null, topics: [numerals]}
+  - name: Elemental 3
+    units:
+      - {n: 15, title: null, topics: [verbs-subjuntiu-imperfet, condicionals]}
+      - {n: 16, title: null, topics: [estil-indirecte]}
+      - {n: 17, title: null, topics: [ser-estar, per-per-a]}
+      - {n: 18, title: null, topics: [passiva-impersonals]}
+      - {n: 19, title: null, topics: [gerundi-participi, perifrasis]}
+      - {n: 20, title: null, topics: [connectors]}
+      - {n: 21, title: null, topics: [repas]}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<hgroup>
+  <h1>Català, nivell Elemental (B1)</h1>
+  <p>Guies breus, un conjugador complet i exercicis generats per practicar el que toca a cada unitat.</p>
+</hgroup>
+<div class="grid">
+  <article class="card">
+    <h2><a href="/guies">Guies d'estudi</a></h2>
+    <p>Gramàtica per temes, seguint les 21 unitats de <em>Passos 2</em>: passats, subjuntiu, pronoms febles, ser i estar…</p>
+    <a role="button" href="/guies">Obre les guies</a>
+  </article>
+  <article class="card">
+    <h2><a href="/verbs">Conjugador</a></h2>
+    <p>10.000 verbs en català central. Cerca per infinitiu o per qualsevol forma (<em>vaig</em>, <em>hauríem</em>) i mira la taula completa.</p>
+    <a role="button" href="/verbs">Cerca un verb</a>
+  </article>
+  <article class="card">
+    <h2><a href="/exercicis">Exercicis</a></h2>
+    <p>Sèries de 10 ítems per tema o per unitat, amb correcció immediata i enllaç a la guia quan falles.</p>
+    <a role="button" href="/exercicis">Comença una sèrie</a>
+  </article>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+- {type: cloze, text: "\"Tinc son.\" → Va dir que ___ son.", answer: ["tenia"]}
+- {type: cloze, text: "\"Vindré demà.\" → Va dir que ___ l'endemà.", answer: ["vindria"]}
+- {type: cloze, text: "\"He perdut les claus.\" → Va dir que ___ les claus.", answer: ["havia perdut"]}
+- {type: cloze, text: "\"Vaig néixer a Vic.\" → Va explicar que ___ a Vic.", answer: ["havia nascut"]}
+- {type: cloze, text: "\"Tanca la porta.\" → Em va demanar que ___ la porta.", answer: ["tanqués"]}
+- {type: cloze, text: "\"Vius aquí?\" → Em va preguntar ___ vivia allà.", answer: ["si"]}
+- {type: cloze, text: "\"On treballes?\" → Em va preguntar on ___.", answer: ["treballava"]}
+- {type: cloze, text: "\"Demà tinc examen.\" → Va dir que ___ tenia examen. (demà →)", answer: ["l'endemà"]}
+- {type: cloze, text: "\"Avui no puc.\" → Va dir que ___ no podia. (avui →)", answer: ["aquell dia"]}
+- {type: cloze, text: "\"Vull que vinguis.\" → Va dir que volia que ___.", answer: ["vingués"]}
+- {type: cloze, text: "\"Té fred.\" → Diu que ___ fred. (verb de dir en present)", answer: ["té"]}
+- {type: choice, text: "\"Estic cansat.\" → ", options: ["Va dir que estava cansat.", "Va dir que està cansat.", "Va dir que estigués cansat.", "Va dir que estaria cansat."], answer: ["Va dir que estava cansat."]}
+- {type: choice, text: "\"Has sopat?\" →", options: ["Em va preguntar si havia sopat.", "Em va preguntar que havia sopat.", "Em va preguntar si he sopat.", "Em va preguntar si sopés."], answer: ["Em va preguntar si havia sopat."]}
+- {type: choice, text: "\"No fumis aquí!\" →", options: ["Em va dir que no fumés allà.", "Em va dir que no fumi allà.", "Em va dir que no fumava allà.", "Em va dir no fumis allà."], answer: ["Em va dir que no fumés allà."]}
+- {type: transform, text: "Estil indirecte (Va dir que…): \"Demà aniré a Girona.\"", answer: ["Va dir que l'endemà aniria a Girona.", "Va dir que aniria a Girona l'endemà."]}
+- {type: transform, text: "Estil indirecte (Em va preguntar…): \"Quants anys tens?\"", answer: ["Em va preguntar quants anys tenia."]}
+- {type: cloze, text: "\"Estic estudiant.\" → Va dir que ___ estudiant.", answer: ["estava"]}
+- {type: cloze, text: "\"Aniré al metge.\" → Va dir que ___ al metge.", answer: ["aniria"]}
+- {type: cloze, text: "\"Vam guanyar el partit.\" → Van explicar que ___ el partit.", answer: ["havien guanyat"]}
+- {type: cloze, text: "\"No m'agrada el peix.\" → Va dir que no li ___ el peix.", answer: ["agradava"]}
+- {type: cloze, text: "\"Calla!\" → Em va dir que ___.", answer: ["callés"]}
+- {type: cloze, text: "\"Quan arribes?\" → Em va preguntar ___ arribava.", answer: ["quan"]}
+- {type: cloze, text: "\"Tens fred?\" → Em va preguntar ___ tenia fred.", answer: ["si"]}
+- {type: cloze, text: "\"Ahir vaig veure la Marta.\" → Va dir que ___ havia vist la Marta. (ahir →)", answer: ["el dia abans", "el dia anterior"]}
+- {type: cloze, text: "\"Ara no puc.\" → Va dir que ___ no podia. (ara →)", answer: ["llavors", "aleshores", "en aquell moment"]}
+- {type: cloze, text: "\"Aquest pis és car.\" → Va dir que ___ pis era car. (aquest →)", answer: ["aquell"]}
+- {type: cloze, text: "\"Porta'm el diari.\" → Em va demanar que li ___ el diari.", answer: ["portés"]}
+- {type: cloze, text: "\"Hem acabat la feina.\" → Diuen que ___ la feina. (verb de dir en present)", answer: ["han acabat"]}
+- {type: cloze, text: "\"Vindré aquí demà.\" → Va dir que vindria ___ l'endemà. (aquí →)", answer: ["allà"]}
+- {type: choice, text: "\"Viuré a Londres.\" →", options: ["Va dir que viuria a Londres.", "Va dir que viurà a Londres.", "Va dir que visqués a Londres.", "Va dir que vivia a Londres."], answer: ["Va dir que viuria a Londres."]}
+- {type: choice, text: "\"On és el banc?\" →", options: ["Em va preguntar on era el banc.", "Em va preguntar que on és el banc.", "Em va preguntar si on era el banc.", "Em va preguntar on fos el banc."], answer: ["Em va preguntar on era el banc."]}
+- {type: choice, text: "\"Vine a les sis.\" →", options: ["Em va dir que vingués a les sis.", "Em va dir que vinc a les sis.", "Em va dir que vindria a les sis.", "Em va dir que vine a les sis."], answer: ["Em va dir que vingués a les sis."]}
+- {type: transform, text: "Estil indirecte (Va dir que…): \"Tinc dos fills.\"", answer: ["Va dir que tenia dos fills."]}
+- {type: transform, text: "Estil indirecte (Em va preguntar…): \"Has vist la pel·lícula?\"", answer: ["Em va preguntar si havia vist la pel·lícula."]}

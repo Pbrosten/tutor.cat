@@ -1,0 +1,36 @@
+- {type: cloze, text: "___ llibre (aquest, prop)", answer: ["aquest"]}
+- {type: cloze, text: "___ cadires (lluny, f. pl.)", answer: ["aquelles"]}
+- {type: cloze, text: "___ nenes (prop, f. pl.)", answer: ["aquestes"]}
+- {type: cloze, text: "Què és ___? (neutre, prop)", answer: ["això"]}
+- {type: cloze, text: "___ d'ahir va ser divertit. (neutre, lluny)", answer: ["allò"]}
+- {type: cloze, text: "___ cotxe (meu)", answer: ["el meu"]}
+- {type: cloze, text: "___ casa (nostre, f.)", answer: ["la nostra"]}
+- {type: cloze, text: "___ amigues (teu, f. pl.)", answer: ["les teves"]}
+- {type: cloze, text: "___ fills (seu, pl.)", answer: ["els seus"]}
+- {type: cloze, text: "___ mare (vostre, f.)", answer: ["la vostra"]}
+- {type: cloze, text: "La Maria i ___ gos. (seu)", answer: ["el seu"]}
+- {type: cloze, text: "Un amic ___ viu a Reus. (meu, darrere del nom)", answer: ["meu"]}
+- {type: choice, text: "Forma correcta:", options: ["la meva germana", "meva germana", "la meu germana", "la mia germana"], answer: ["la meva germana"]}
+- {type: choice, text: "Forma correcta:", options: ["els nostres pares", "els nostros pares", "nostres pares", "els nostre pares"], answer: ["els nostres pares"]}
+- {type: choice, text: "Forma àtona correcta:", options: ["ma mare", "mon mare", "mes mare", "ma la mare"], answer: ["ma mare"]}
+- {type: choice, text: "Assenyales un objecte que no saps anomenar:", options: ["Què és això?", "Què és aquest?", "Què és aquesta?", "Què és aquí?"], answer: ["Què és això?"]}
+- {type: cloze, text: "___ nen (lluny)", answer: ["aquell"]}
+- {type: cloze, text: "___ pomes (prop, f. pl.)", answer: ["aquestes"]}
+- {type: cloze, text: "___ home (prop)", answer: ["aquest"]}
+- {type: cloze, text: "___ muntanyes (lluny, f. pl.)", answer: ["aquelles"]}
+- {type: cloze, text: "No m'agrada ___. (neutre, lluny)", answer: ["allò"]}
+- {type: cloze, text: "Seu ___, al costat meu. (aquí)", answer: ["aquí"]}
+- {type: cloze, text: "El cotxe és ___, al final del carrer. (allà)", answer: ["allà", "allí"]}
+- {type: cloze, text: "___ germans (meu, pl.)", answer: ["els meus"]}
+- {type: cloze, text: "___ tia (seu, f.)", answer: ["la seva"]}
+- {type: cloze, text: "___ pis (nostre)", answer: ["el nostre"]}
+- {type: cloze, text: "___ idees (vostre, f. pl.)", answer: ["les vostres"]}
+- {type: cloze, text: "___ filles (seu, f. pl.)", answer: ["les seves"]}
+- {type: cloze, text: "___ bici (teu, f.)", answer: ["la teva"]}
+- {type: cloze, text: "Aquesta bossa és ___. (meu, darrere de 'ser')", answer: ["meva"]}
+- {type: cloze, text: "Uns amics ___ viuen a Girona. (nostres, darrere del nom)", answer: ["nostres"]}
+- {type: cloze, text: "Vaig a ___ meva. (casa meva → ca meva)", answer: ["ca", "casa"]}
+- {type: choice, text: "'these shoes':", options: ["aquestes sabates", "aquests sabates", "aquestas sabates", "aquelles sabates"], answer: ["aquestes sabates"]}
+- {type: choice, text: "'that (thing over there) is a castle':", options: ["Allò és un castell.", "Aquell és un castell.", "Allà és un castell.", "Aquello és un castell."], answer: ["Allò és un castell."]}
+- {type: choice, text: "'his sisters':", options: ["les seves germanes", "els seus germanes", "les seus germanes", "les seva germanes"], answer: ["les seves germanes"]}
+- {type: choice, text: "'our dog':", options: ["el nostre gos", "el nostro gos", "nostre gos", "el nostres gos"], answer: ["el nostre gos"]}

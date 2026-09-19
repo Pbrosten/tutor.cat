@@ -1,0 +1,34 @@
+- {type: cloze, text: "Aquí ___ parla català. (es)", answer: ["es"]}
+- {type: cloze, text: "___ venen pisos nous al barri. (es + vendre)", answer: ["es"]}
+- {type: cloze, text: "En aquest restaurant ___ molt bé. (menjar, impersonal)", answer: ["es menja"]}
+- {type: cloze, text: "___ obert dues botigues noves. (obrir, pretèrit indefinit, es)", answer: ["s'han"]}
+- {type: cloze, text: "___ de reservar taula abans. (obligació impersonal)", answer: ["s'ha"]}
+- {type: cloze, text: "Com ___ 'thank you' en català? (dir)", answer: ["es diu"]}
+- {type: cloze, text: "___ molta gent a la plaça. (hi ha)", answer: ["hi ha"]}
+- {type: cloze, text: "Ahir ___ un accident a la carretera. (hi va haver)", answer: ["hi va haver"]}
+- {type: cloze, text: "Queden entrades? — No, no ___ cap.", answer: ["n'hi ha"]}
+- {type: cloze, text: "El museu ___ inaugurat el 1995. (ser, perifràstic)", answer: ["va ser"]}
+- {type: cloze, text: "La novel·la ha estat ___ a vint llengües. (traduir, participi, f.)", answer: ["traduïda"]}
+- {type: choice, text: "'Volunteers are needed':", options: ["Es necessiten voluntaris.", "Es necessita voluntaris.", "Necessiten-se voluntaris.", "Hi ha necessitat voluntaris."], answer: ["Es necessiten voluntaris."]}
+- {type: choice, text: "'You can't smoke here' (impersonal):", options: ["Aquí no es pot fumar.", "Aquí no pots es fumar.", "Aquí no es poden fumar.", "Aquí no hi ha fumar."], answer: ["Aquí no es pot fumar."]}
+- {type: choice, text: "Estat o acció — 'The door is closed (state)':", options: ["La porta està tancada.", "La porta va ser tancada.", "La porta es tanca.", "La porta és tancar."], answer: ["La porta està tancada."]}
+- {type: transform, text: "Fes-la impersonal amb 'es': La gent diu que plourà. →", answer: ["Es diu que plourà."]}
+- {type: cloze, text: "___ lloga habitació al centre. (es + llogar)", answer: ["es"]}
+- {type: cloze, text: "___ necessiten cambrers amb experiència. (es)", answer: ["es"]}
+- {type: cloze, text: "En aquest barri ___ molt tranquil·lament. (viure, impersonal)", answer: ["es viu"]}
+- {type: cloze, text: "Aquí no ___ pot aparcar.", answer: ["es"]}
+- {type: cloze, text: "___ diu que pujaran els preus. (es + dir)", answer: ["es"]}
+- {type: cloze, text: "Com ___ això? (escriure)", answer: ["s'escriu"]}
+- {type: cloze, text: "___ tancat moltes botigues al carrer Gran. (tancar, pretèrit indefinit, es, pl.)", answer: ["s'han"]}
+- {type: cloze, text: "L'any que ve ___ un nou hospital. (hi haurà)", answer: ["hi haurà"]}
+- {type: cloze, text: "Abans ___ un cinema aquí. (imperfet)", answer: ["hi havia"]}
+- {type: cloze, text: "Aquest any ___ moltes tempestes. (pretèrit indefinit)", answer: ["hi ha hagut"]}
+- {type: cloze, text: "Hi ha llet? — Sí, ___ ha una ampolla.", answer: ["n'hi"]}
+- {type: cloze, text: "La carta ___ escrita per la directora. (ser, pretèrit indefinit)", answer: ["ha estat", "ha sigut"]}
+- {type: cloze, text: "Les obres seran ___ pel govern. (pagar, participi, f. pl.)", answer: ["pagades"]}
+- {type: cloze, text: "El formatge ___ amb llet de cabra. (fer, es)", answer: ["es fa"]}
+- {type: choice, text: "'Catalan is spoken here':", options: ["Aquí es parla català.", "Aquí parla català.", "Aquí es parlen català.", "Aquí està parlat català."], answer: ["Aquí es parla català."]}
+- {type: choice, text: "'People say he's rich':", options: ["Diuen que és ric.", "Es diuen que és ric.", "Diu que és ric.", "Hom diuen que és ric."], answer: ["Diuen que és ric."]}
+- {type: choice, text: "'There are many people':", options: ["Hi ha molta gent.", "Hi han molta gent.", "Hi ha moltes gents.", "Hi haven molta gent."], answer: ["Hi ha molta gent."]}
+- {type: choice, text: "Acció o estat — 'The museum was inaugurated in 1990':", options: ["El museu va ser inaugurat el 1990.", "El museu estava inaugurat el 1990.", "El museu es va inaugurar-se el 1990.", "El museu és inaugurat el 1990."], answer: ["El museu va ser inaugurat el 1990."]}
+- {type: transform, text: "Fes-la impersonal amb 'es': A Catalunya la gent sopa tard. →", answer: ["A Catalunya es sopa tard."]}

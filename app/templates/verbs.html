@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Conjugador — Catalan Helper{% endblock %}
+{% block content %}
+<hgroup>
+  <h1>Conjugador</h1>
+  <p>Escriu un infinitiu o qualsevol forma conjugada.</p>
+</hgroup>
+<input type="search" name="q" value="{{ q }}" placeholder="cantar, vaig, hauríem, tinguéssim…" autofocus autocomplete="off"
+       hx-get="/verbs/cerca" hx-trigger="input changed delay:200ms, keyup[key=='Enter']" hx-target="#results">
+<div id="results">{% include "verbs_results.html" %}</div>
+{% endblock %}

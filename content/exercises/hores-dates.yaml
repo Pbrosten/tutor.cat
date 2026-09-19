@@ -1,0 +1,39 @@
+- {type: cloze, text: "1:15 → un quart ___", answer: ["de dues"]}
+- {type: cloze, text: "1:30 → ___ de dues", answer: ["dos quarts"]}
+- {type: cloze, text: "1:45 → ___ de dues", answer: ["tres quarts"]}
+- {type: cloze, text: "12:30 → dos quarts ___", answer: ["d'una"]}
+- {type: cloze, text: "2:00 → ___ les dues (verb)", answer: ["són"]}
+- {type: cloze, text: "1:00 → ___ la una (verb)", answer: ["és"]}
+- {type: cloze, text: "8:20 → un quart ___ de nou", answer: ["i cinc"]}
+- {type: cloze, text: "9:55 → les deu ___", answer: ["menys cinc"]}
+- {type: cloze, text: "Escriu l'hora: 3:15", answer: ["un quart de quatre"]}
+- {type: cloze, text: "Escriu l'hora: 6:30", answer: ["dos quarts de set"]}
+- {type: cloze, text: "Escriu l'hora: 10:45", answer: ["tres quarts d'onze"]}
+- {type: cloze, text: "Escriu l'hora: 5:10", answer: ["les cinc i deu"]}
+- {type: cloze, text: "Escriu l'hora: 11:35", answer: ["dos quarts i cinc de dotze"]}
+- {type: cloze, text: "'cada dilluns' → ___ dilluns", answer: ["els"]}
+- {type: cloze, text: "L'1 de març → ___ de març", answer: ["l'1", "l'u"]}
+- {type: choice, text: "Quina hora és? — 7:45", options: ["Són tres quarts de vuit.", "Són les set i tres quarts.", "Són tres quarts de set.", "És tres quarts de vuit."], answer: ["Són tres quarts de vuit."]}
+- {type: choice, text: "'a les 8 del vespre':", options: ["a les vuit del vespre", "a les vuit del matí", "a les vint hores del vespre", "a vuit de la tarda"], answer: ["a les vuit del vespre"]}
+- {type: choice, text: "Data correcta:", options: ["el 5 de març del 2024", "el 5 de Març del 2024", "5 de març de el 2024", "el 5 del març del 2024"], answer: ["el 5 de març del 2024"]}
+- {type: choice, text: "'al matí':", options: ["al matí", "a la matí", "en el matí", "pel matí"], answer: ["al matí"]}
+- {type: cloze, text: "Escriu l'hora: 4:30", answer: ["dos quarts de cinc"]}
+- {type: cloze, text: "Escriu l'hora: 8:15", answer: ["un quart de nou"]}
+- {type: cloze, text: "Escriu l'hora: 1:45", answer: ["tres quarts de dues"]}
+- {type: cloze, text: "Escriu l'hora: 12:15", answer: ["un quart d'una"]}
+- {type: cloze, text: "Escriu l'hora: 7:05", answer: ["les set i cinc"]}
+- {type: cloze, text: "Escriu l'hora: 2:50", answer: ["les tres menys deu", "tres quarts i cinc de tres"]}
+- {type: cloze, text: "Escriu l'hora: 9:20", answer: ["un quart i cinc de deu"]}
+- {type: cloze, text: "Escriu l'hora: 10:00", answer: ["les deu", "les deu en punt"]}
+- {type: cloze, text: "Escriu l'hora: 3:40", answer: ["dos quarts i deu de quatre", "tres quarts menys cinc de quatre"]}
+- {type: cloze, text: "'a la tarda' → ___ tarda", answer: ["a la"]}
+- {type: cloze, text: "'a la nit' → ___ nit", answer: ["a la"]}
+- {type: cloze, text: "'a les 3 de la tarda' → a les tres ___", answer: ["de la tarda"]}
+- {type: cloze, text: "'a l'hivern' → ___ hivern", answer: ["a l'"]}
+- {type: cloze, text: "'dilluns que ve' (sense article) → ___ tinc dentista.", answer: ["Dilluns"]}
+- {type: cloze, text: "'dos cops a la setmana' → dos cops ___ setmana", answer: ["a la", "per"]}
+- {type: choice, text: "Quina hora és? — 12:30", options: ["Són dos quarts d'una.", "Són dos quarts de dotze.", "Són les dotze i mitja.", "És dos quarts d'una."], answer: ["Són dos quarts d'una."]}
+- {type: choice, text: "Quina hora és? — 1:00", options: ["És la una.", "Són la una.", "Són les una.", "És les una."], answer: ["És la una."]}
+- {type: choice, text: "'cada dissabte':", options: ["els dissabtes", "el dissabte", "dissabtes", "als dissabtes"], answer: ["els dissabtes"]}
+- {type: choice, text: "'l'any 2010':", options: ["el 2010", "en 2010", "al 2010", "a 2010"], answer: ["el 2010"]}
+- {type: choice, text: "'11.30 de la nit':", options: ["a dos quarts de dotze de la nit", "a les onze i mitja de la nit", "a dos quarts d'onze de la nit", "a onze i mig de la nit"], answer: ["a dos quarts de dotze de la nit"]}

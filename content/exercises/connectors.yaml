@@ -1,0 +1,33 @@
+- {type: cloze, text: "No és vermell, ___ taronja. (correcció)", answer: ["sinó"]}
+- {type: cloze, text: "Vull anar a la platja, ___ fa fred. (contrast)", answer: ["però"]}
+- {type: cloze, text: "Plou molt; ___, no sortirem. (conseqüència)", answer: ["per tant", "doncs", "així doncs", "per això"]}
+- {type: cloze, text: "No surto ___ plou. (causa)", answer: ["perquè", "ja que"]}
+- {type: cloze, text: "___ plovia, vam anar a la platja. (concessió)", answer: ["Tot i que", "Encara que", "Malgrat que"]}
+- {type: cloze, text: "___ la pluja, vam anar a la platja. (concessió + nom)", answer: ["Malgrat", "Tot i"]}
+- {type: cloze, text: "El pis és petit; ___, és molt lluminós. (en canvi)", answer: ["en canvi", "d'altra banda", "tanmateix"]}
+- {type: cloze, text: "___, el preu; en segon lloc, la ubicació. (ordre)", answer: ["En primer lloc", "Primer"]}
+- {type: cloze, text: "___, és una bona opció. (resum)", answer: ["En resum", "En definitiva", "En conclusió"]}
+- {type: cloze, text: "M'agraden els esports, ___ el futbol. (èmfasi)", answer: ["sobretot"]}
+- {type: cloze, text: "No només canta, ___ també balla.", answer: ["sinó que"]}
+- {type: choice, text: "Ús correcte de 'doncs':", options: ["Plou; doncs, no sortim.", "No sortim doncs plou.", "Doncs plou, no sortim.", "No sortim, doncs que plou."], answer: ["Plou; doncs, no sortim."]}
+- {type: choice, text: "'that is' (aclarir):", options: ["és a dir", "per exemple", "en canvi", "a més"], answer: ["és a dir"]}
+- {type: choice, text: "Expressa desacord amb educació:", options: ["No ho veig així.", "Tens raó.", "I tant!", "Exacte."], answer: ["No ho veig així."]}
+- {type: choice, text: "Dona una opinió:", options: ["Al meu parer, és car.", "Al meu pensar, és car.", "Segons mi, és car.", "En la meva opinió que és car."], answer: ["Al meu parer, és car."]}
+- {type: cloze, text: "Estic cansada; ___, aniré a la festa. (contrast)", answer: ["tanmateix", "no obstant això", "malgrat tot", "tot i això"]}
+- {type: cloze, text: "No té cotxe ___ moto. (ni)", answer: ["ni"]}
+- {type: cloze, text: "Va estudiar molt i, ___, va aprovar. (conseqüència)", answer: ["per tant", "en conseqüència", "per això", "així doncs"]}
+- {type: cloze, text: "Hi ha moltes fruites, ___ les pomes i les peres. (exemple)", answer: ["com ara", "per exemple"]}
+- {type: cloze, text: "___ el preu és alt, val la pena. (concessió)", answer: ["Encara que", "Tot i que", "Malgrat que"]}
+- {type: cloze, text: "No he vingut ___ estava malalt. (causa)", answer: ["perquè", "ja que"]}
+- {type: cloze, text: "___ banda, és barat; de l'altra, és lleig. (dues cares)", answer: ["D'una"]}
+- {type: cloze, text: "___ parlaré del problema; després, de les solucions. (ordre)", answer: ["Primer", "En primer lloc"]}
+- {type: cloze, text: "___ que el pis és massa car. (opinió)", answer: ["Crec", "Penso", "Em sembla"]}
+- {type: cloze, text: "Hi estic ___ amb tu. (acord)", answer: ["d'acord"]}
+- {type: cloze, text: "La sala era petita, ___ hi cabia poca gent. (conseqüència)", answer: ["de manera que", "així que", "per tant"]}
+- {type: cloze, text: "Tothom hi va anar, ___ els nens. (èmfasi)", answer: ["fins i tot"]}
+- {type: cloze, text: "___, no ens podem queixar. (resum)", answer: ["En definitiva", "En resum", "En conclusió", "Al capdavall"]}
+- {type: choice, text: "'but rather' després d'una negació:", options: ["No vull te, sinó cafè.", "No vull te, però cafè.", "No vull te, si no cafè.", "No vull te, en canvi cafè."], answer: ["No vull te, sinó cafè."]}
+- {type: choice, text: "Tria el connector de conseqüència:", options: ["per tant", "ja que", "com que", "perquè"], answer: ["per tant"]}
+- {type: choice, text: "Tria el connector de causa:", options: ["ja que", "per tant", "així doncs", "en canvi"], answer: ["ja que"]}
+- {type: choice, text: "Quina frase fa servir 'doncs' correctament?", options: ["No hi ha pa; doncs, anem a comprar-ne.", "Anem a comprar pa doncs no n'hi ha.", "Doncs no hi ha pa, anem a comprar-ne.", "Anem a comprar pa, doncs que no n'hi ha."], answer: ["No hi ha pa; doncs, anem a comprar-ne."]}
+- {type: choice, text: "Pren la paraula suaument:", options: ["A veure, jo crec que…", "Sinó, jo crec que…", "Per tant, jo crec que…", "Malgrat, jo crec que…"], answer: ["A veure, jo crec que…"]}

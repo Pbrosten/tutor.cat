@@ -1,0 +1,37 @@
+- {type: cloze, text: "___ amic de la Marta és metge.", answer: ["L'"], hint: "el + vocal"}
+- {type: cloze, text: "___ universitat és molt gran.", answer: ["La"], hint: "fem. + u àtona"}
+- {type: cloze, text: "___ illa de Menorca.", answer: ["L'"], hint: "fem. + i tònica"}
+- {type: cloze, text: "___ idea és bona.", answer: ["La"], hint: "fem. + i àtona"}
+- {type: cloze, text: "Anem ___ cinema aquesta tarda.", answer: ["al"], hint: "a + el"}
+- {type: cloze, text: "Anem ___ hotel a deixar les maletes.", answer: ["a l'"], hint: "a + l'"}
+- {type: cloze, text: "Vinc ___ metge.", answer: ["del"], hint: "de + el"}
+- {type: cloze, text: "El cotxe ___ avi és vell.", answer: ["de l'"], hint: "de + l'"}
+- {type: cloze, text: "Passem ___ carrers del centre.", answer: ["pels"], hint: "per + els"}
+- {type: cloze, text: "Les claus ___ cotxes són aquí.", answer: ["dels"], hint: "de + els"}
+- {type: cloze, text: "Aquest vespre sopem a ___ Miquel.", answer: ["can", "cal"], hint: "ca + en"}
+- {type: cloze, text: "___ Anna i ___ Joan són germans.", answer: ["L' / en", "L' / el"], hint: "article personal"}
+- {type: cloze, text: "Un got ___ aigua, si us plau.", answer: ["d'"], hint: "de + vocal"}
+- {type: cloze, text: "Vaig ___ Olot cada estiu.", answer: ["a"], hint: "a no s'apostrofa mai"}
+- {type: choice, text: "Quina és correcta?", options: ["l'hora", "la hora", "el hora", "l'ora"], answer: ["l'hora"]}
+- {type: choice, text: "Quina és correcta?", options: ["la humitat", "l'humitat", "el humitat", "la umitat"], answer: ["la humitat"]}
+- {type: choice, text: "Vaig ___ escola.", options: ["a l'", "al", "a la", "a el"], answer: ["a l'"]}
+- {type: choice, text: "Torno ___ feina a les sis.", options: ["de la", "del", "de l'", "dela"], answer: ["de la"]}
+- {type: cloze, text: "___ home que viu aquí és pintor.", answer: ["L'"], hint: "el + h"}
+- {type: cloze, text: "___ història de Catalunya és llarga.", answer: ["La"], hint: "fem. + hi- àtona"}
+- {type: cloze, text: "___ ungla del dit gros.", answer: ["L'"], hint: "fem. + u tònica"}
+- {type: cloze, text: "Aquest cap de setmana anem ___ Pirineus.", answer: ["als"], hint: "a + els"}
+- {type: cloze, text: "El menú ___ restaurant és car.", answer: ["del"], hint: "de + el"}
+- {type: cloze, text: "Vam passejar ___ port fins a la platja.", answer: ["pel"], hint: "per + el"}
+- {type: cloze, text: "La finestra ___ habitació està oberta.", answer: ["de l'"], hint: "de + l' (fem., a tònica)"}
+- {type: cloze, text: "Vaig a casa ___ meus pares.", answer: ["dels"], hint: "de + els"}
+- {type: cloze, text: "Passem ___ carrer Major.", answer: ["pel"], hint: "per + el"}
+- {type: cloze, text: "Vinc ___ escola de la meva filla.", answer: ["de l'"], hint: "de + l'"}
+- {type: cloze, text: "___ Andreu i ___ Eulàlia són veïns.", answer: ["N' / l'", "L' / l'"], hint: "article personal davant de vocal (n'/l')"}
+- {type: cloze, text: "Un tros ___ pa amb tomàquet.", answer: ["de"], hint: "de + consonant"}
+- {type: cloze, text: "Un plat ___ arròs.", answer: ["d'"], hint: "de + vocal"}
+- {type: cloze, text: "Sopem ___ Roca aquesta nit. (casa de la família Roca)", answer: ["a can", "a cal"], hint: "ca + en"}
+- {type: choice, text: "Contracció correcta?", options: ["pels camps", "per els camps", "pel camps", "per los camps"], answer: ["pels camps"]}
+- {type: choice, text: "Correcta?", options: ["a l'aeroport", "al aeroport", "a el aeroport", "a l'aeropuerto"], answer: ["a l'aeroport"]}
+- {type: choice, text: "Correcta?", options: ["la universitat", "l'universitat", "el universitat", "la universidad"], answer: ["la universitat"]}
+- {type: choice, text: "Correcta?", options: ["l'Elena", "la Elena", "el Elena", "le Elena"], answer: ["l'Elena"]}
+- {type: choice, text: "Correcta?", options: ["de les nenes", "des nenes", "de las nenes", "de l'nenes"], answer: ["de les nenes"]}

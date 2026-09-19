@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Guies — Catalan Helper{% endblock %}
+{% block content %}
+<hgroup>
+  <h1>Guies d'estudi</h1>
+  <p>Nivell Elemental (B1), seguint <em>Passos 2</em>. Tres mòduls, set unitats cadascun.</p>
+</hgroup>
+{% for m in modules %}
+<section class="module">
+  <h2>{{ m.name }}</h2>
+  <div class="unitlist">
+  {% for u in m.units %}
+  <div class="unit">
+    <div class="unum">{{ u.n }}</div>
+    <div class="ubody">
+      <div class="utitle">{{ u.title or "Unitat " ~ u.n }}</div>
+      <div class="chips">
+      {% for t in u.topics %}
+        {% if titles[t] %}
+          {% set st = 'read' if status.get(t, {}).get('read') else ('seen' if t in status else '') %}
+          <a class="chip {{ st }}" href="/guies/{{ t }}">{% if st == 'read' %}✓ {% elif st == 'seen' %}○ {% endif %}{{ titles[t] }}</a>
+        {% else %}<span class="chip pending">{{ t }} (pendent)</span>{% endif %}
+      {% endfor %}
+      </div>
+    </div>
+    <a class="uex" role="button" href="/exercicis/sessio?unitat={{ u.n }}">Exercicis</a>
+  </div>
+  {% endfor %}
+  </div>
+</section>
+{% endfor %}
+{% if user_of(request) %}<p class="muted"><small><span class="done">✓</span> llegida · <span class="seen">○</span> oberta</small></p>{% endif %}
+{% endblock %}

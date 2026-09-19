@@ -1,0 +1,32 @@
+- {type: cloze, text: "Si ___ temps, t'ajudaré. (tenir, jo, real)", answer: ["tinc"]}
+- {type: cloze, text: "Si ___ temps, t'ajudaria. (tenir, jo, hipòtesi)", answer: ["tingués"]}
+- {type: cloze, text: "Si plou, no ___. (sortir, nosaltres, futur)", answer: ["sortirem"]}
+- {type: cloze, text: "Si fos ric, ___ una casa a la platja. (comprar, jo)", answer: ["compraria"]}
+- {type: cloze, text: "Què faries si ___ la loteria? (guanyar, tu)", answer: ["guanyessis"]}
+- {type: cloze, text: "Si ___ gana, menja alguna cosa. (tenir, tu)", answer: ["tens"]}
+- {type: cloze, text: "Si ___ més a prop, ens veuríem cada dia. (viure, vosaltres)", answer: ["visquéssiu"]}
+- {type: cloze, text: "Si no ___ tant, no estaries tan cansat. (treballar, tu)", answer: ["treballessis"]}
+- {type: cloze, text: "En cas que no ___ venir, avisa'm. (poder, tu)", answer: ["puguis"]}
+- {type: cloze, text: "Afanya't; ___, perdrem el tren. (si no)", answer: ["si no"]}
+- {type: choice, text: "Correcta:", options: ["Si tinc temps, vindré.", "Si tindré temps, vindré.", "Si tindria temps, vindré.", "Si tingui temps, vindré."], answer: ["Si tinc temps, vindré."]}
+- {type: choice, text: "Correcta:", options: ["Si fossis aquí, t'ho ensenyaria.", "Si series aquí, t'ho ensenyaria.", "Si eres aquí, t'ho ensenyaria.", "Si siguis aquí, t'ho ensenyaria."], answer: ["Si fossis aquí, t'ho ensenyaria."]}
+- {type: choice, text: "Correcta:", options: ["Si pogués, hi aniria.", "Si pogués, hi aniré.", "Si podria, hi aniria.", "Si puc, hi aniria."], answer: ["Si pogués, hi aniria."]}
+- {type: transform, text: "Fes-la hipotètica: Si tinc diners, viatjo. →", answer: ["Si tingués diners, viatjaria."]}
+- {type: transform, text: "Fes-la hipotètica: Si véns, t'ho explico. →", answer: ["Si vinguessis, t'ho explicaria."]}
+- {type: cloze, text: "Si ___ més d'hora, agafaríem el primer tren. (sortir, nosaltres)", answer: ["sortíssim"]}
+- {type: cloze, text: "Si demà ___ bon temps, anirem a la platja. (fer)", answer: ["fa"]}
+- {type: cloze, text: "Si ___ el meu germà, li diries la veritat. (ser, tu)", answer: ["fossis"]}
+- {type: cloze, text: "Si no ___ tant, estalviaries més. (gastar, tu)", answer: ["gastessis"]}
+- {type: cloze, text: "Si ___ tard, no m'esperis. (arribar, jo)", answer: ["arribo"]}
+- {type: cloze, text: "Si tinguéssim un jardí, ___ un gos. (tenir, nosaltres)", answer: ["tindríem"]}
+- {type: cloze, text: "Si el veus, ___ que em truqui. (dir-li, imperatiu)", answer: ["digues-li", "digue-li"]}
+- {type: cloze, text: "Si ___ més, aprovaríeu. (estudiar, vosaltres)", answer: ["estudiéssiu"]}
+- {type: cloze, text: "Hi anirem, ___ que plogui. (excepte si)", answer: ["llevat", "tret"]}
+- {type: cloze, text: "Pots quedar-te ___ que no facis soroll. (a condició que)", answer: ["sempre", "mentre"]}
+- {type: cloze, text: "Si ___ diners, compraria un pis més gran. (tenir, jo)", answer: ["tingués"]}
+- {type: cloze, text: "Si ___ pogut, hauria vingut. (haver, ell) — patró de B2", answer: ["hagués"]}
+- {type: choice, text: "Correcta:", options: ["Si vinguessis, estaríem contents.", "Si vindries, estaríem contents.", "Si vinguessis, estarem contents.", "Si vens, estaríem contents."], answer: ["Si vinguessis, estaríem contents."]}
+- {type: choice, text: "Correcta:", options: ["Si plou demà, no sortirem.", "Si plourà demà, no sortirem.", "Si plogui demà, no sortirem.", "Si plogués demà, no sortirem."], answer: ["Si plou demà, no sortirem."]}
+- {type: choice, text: "'Hurry up, otherwise we'll be late':", options: ["Afanya't; si no, farem tard.", "Afanya't; sinó, farem tard.", "Afanya't; si no que farem tard.", "Afanya't; si no faríem tard."], answer: ["Afanya't; si no, farem tard."]}
+- {type: transform, text: "Fes-la hipotètica: Si tens gana, menges. →", answer: ["Si tinguessis gana, menjaries."]}
+- {type: transform, text: "Fes-la real (present/futur): Si fes sol, aniríem a la platja. →", answer: ["Si fa sol, anirem a la platja."]}

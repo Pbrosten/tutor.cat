@@ -1,0 +1,42 @@
+- {type: cloze, text: "el germà → la ___", answer: ["germana"]}
+- {type: cloze, text: "el nebot → la ___", answer: ["neboda"]}
+- {type: cloze, text: "el gos → la ___", answer: ["gossa"]}
+- {type: cloze, text: "el psicòleg → la ___", answer: ["psicòloga"]}
+- {type: cloze, text: "l'actor → l'___", answer: ["actriu"]}
+- {type: cloze, text: "l'alumne → l'___", answer: ["alumna"]}
+- {type: cloze, text: "el marit → la ___", answer: ["muller", "dona"]}
+- {type: cloze, text: "la vaca → les ___", answer: ["vaques"]}
+- {type: cloze, text: "la plaça → les ___", answer: ["places"]}
+- {type: cloze, text: "el camió → els ___", answer: ["camions"]}
+- {type: cloze, text: "el sofà → els ___", answer: ["sofàs"]}
+- {type: cloze, text: "el peix → els ___", answer: ["peixos"]}
+- {type: cloze, text: "el braç → els ___", answer: ["braços"]}
+- {type: cloze, text: "el dilluns → els ___", answer: ["dilluns"]}
+- {type: cloze, text: "la llengua → les ___", answer: ["llengües"]}
+- {type: cloze, text: "la platja → les ___", answer: ["platges"]}
+- {type: cloze, text: "el pa → els ___", answer: ["pans"]}
+- {type: choice, text: "Article?  ___ problema", options: ["el", "la", "els", "les"], answer: ["el"]}
+- {type: choice, text: "Article?  ___ calor", options: ["la", "el", "les", "els"], answer: ["la"]}
+- {type: choice, text: "Article?  ___ llet", options: ["la", "el", "l'", "les"], answer: ["la"]}
+- {type: choice, text: "Article?  ___ dents", options: ["les", "els", "la", "el"], answer: ["les"]}
+- {type: choice, text: "Article?  ___ costum", options: ["el", "la", "les", "els"], answer: ["el"]}
+- {type: choice, text: "una noia molt ___", options: ["feliç", "feliça", "feliços", "felís"], answer: ["feliç"]}
+- {type: choice, text: "unes cases ___", options: ["boniques", "bonics", "bonicas", "bonica"], answer: ["boniques"]}
+- {type: cloze, text: "el cosí → la ___", answer: ["cosina"]}
+- {type: cloze, text: "el senyor → la ___", answer: ["senyora"]}
+- {type: cloze, text: "l'esclau → l'___", answer: ["esclava"]}
+- {type: cloze, text: "el director → la ___", answer: ["directora"]}
+- {type: cloze, text: "el gendre → la ___", answer: ["nora", "jove"]}
+- {type: cloze, text: "el periodista → la ___", answer: ["periodista"]}
+- {type: cloze, text: "la mà → les ___", answer: ["mans"]}
+- {type: cloze, text: "el cafè → els ___", answer: ["cafès"]}
+- {type: cloze, text: "el gas → els ___", answer: ["gasos"]}
+- {type: cloze, text: "el temps → els ___", answer: ["temps"]}
+- {type: cloze, text: "l'amiga → les ___", answer: ["amigues"]}
+- {type: cloze, text: "el passeig → els ___", answer: ["passeigs", "passejos"]}
+- {type: choice, text: "Article?  ___ mapa", options: ["el", "la", "les", "els"], answer: ["el"]}
+- {type: choice, text: "Article?  ___ sang", options: ["la", "el", "les", "l'"], answer: ["la"]}
+- {type: choice, text: "Article?  ___ dubte", options: ["el", "la", "els", "les"], answer: ["el"]}
+- {type: choice, text: "Article?  ___ llum (l'aparell)", options: ["el", "la", "els", "les"], answer: ["el"]}
+- {type: choice, text: "un noi molt ___ (jove)", options: ["jove", "jova", "joves", "jov"], answer: ["jove"]}
+- {type: choice, text: "unes preguntes ___ (difícil)", options: ["difícils", "difíciles", "difícil", "dificils"], answer: ["difícils"]}

@@ -1,0 +1,38 @@
+- {type: cloze, text: "Em deixes el llibre? — Sí, ___ deixo.", answer: ["te'l"]}
+- {type: cloze, text: "Ens envies les fotos? — ___ envio aquesta nit.", answer: ["us les"]}
+- {type: cloze, text: "Qui t'ha explicat això? — ___ ha explicat el Pau.", answer: ["m'ho"]}
+- {type: cloze, text: "Vols una mica de sopa? — Sí, posa'___.", answer: ["me'n", "-me'n"], hint: "me + en darrere d'imperatiu"}
+- {type: cloze, text: "Has donat el regal a la Marta? — Sí, ___ he donat.", answer: ["l'hi"]}
+- {type: cloze, text: "Has donat la carta a la Marta? — Sí, ___ he donat.", answer: ["la hi"]}
+- {type: cloze, text: "Has dit la veritat als teus pares? — Sí, ___ he dit.", answer: ["els ho"]}
+- {type: cloze, text: "Has portat pomes a l'àvia? — Sí, ___ he portat un quilo.", answer: ["li'n"]}
+- {type: cloze, text: "Hi ha cadires? — Sí, ___ ha moltes.", answer: ["n'hi"]}
+- {type: cloze, text: "El Joan es compra el cotxe demà. → ___ compra demà.", answer: ["se'l"]}
+- {type: cloze, text: "Has tornat les claus al veí? — Sí, ja ___ he tornat.", answer: ["les hi"]}
+- {type: cloze, text: "Explica-___! (a mi, això)", answer: ["m'ho", "-m'ho"]}
+- {type: choice, text: "Dono els llibres a la Laura. →", options: ["Els hi dono.", "Li els dono.", "Els li dono.", "Els els dono."], answer: ["Els hi dono."]}
+- {type: choice, text: "Dic això al Marc. →", options: ["Li ho dic.", "L'hi dic.", "Ho li dic.", "Li'n dic."], answer: ["Li ho dic."]}
+- {type: choice, text: "Porta'm la bossa. → (imperatiu + pronoms)", options: ["Porta-me-la.", "Porta-me'l.", "Porta-la'm.", "Porta-m'ho."], answer: ["Porta-me-la."]}
+- {type: choice, text: "Vull dir la veritat al Pere. → (enganxats)", options: ["Vull dir-li-ho.", "Vull dir-l'hi.", "Vull dir-li-la.", "Vull li ho dir."], answer: ["Vull dir-li-ho."]}
+- {type: transform, text: "Reescriu amb pronoms: Envio el paquet a la Rosa.", answer: ["L'hi envio."]}
+- {type: transform, text: "Reescriu amb pronoms: Et dono dues pomes.", answer: ["Te'n dono dues."]}
+- {type: transform, text: "Reescriu amb pronoms: Ens presenten la nova cap.", answer: ["Ens la presenten."]}
+- {type: cloze, text: "Em passes la sal? — ___ passo ara mateix.", answer: ["te la"]}
+- {type: cloze, text: "Ens deixes els apunts? — ___ deixo demà.", answer: ["us els"]}
+- {type: cloze, text: "Et dono les claus? — Sí, dona-___.", answer: ["me-les", "-me-les"]}
+- {type: cloze, text: "Has enviat el paquet a la Núria? — Sí, ___ he enviat aquest matí.", answer: ["l'hi"]}
+- {type: cloze, text: "Has explicat el problema als teus pares? — Sí, ___ he explicat.", answer: ["els l'"]}
+- {type: cloze, text: "Vols que t'ho expliqui? — Sí, explica-___.", answer: ["m'ho", "-m'ho"]}
+- {type: cloze, text: "Has comprat pomes per a l'àvia? — Sí, ___ he comprat un quilo.", answer: ["li n'"]}
+- {type: cloze, text: "Has donat les fotos a la Laia? — Sí, ___ he donat.", answer: ["les hi"]}
+- {type: cloze, text: "Hi ha cadires lliures? — No, no ___ ha cap.", answer: ["n'hi"]}
+- {type: cloze, text: "Es menja tot el pa? — Sí, ___ menja tot.", answer: ["se'l"]}
+- {type: cloze, text: "Em dius la veritat? — Sí, ___ dic.", answer: ["te la"]}
+- {type: cloze, text: "Porta el cafè al client. → ___ porta.", answer: ["porta-l'hi", "Porta-l'hi"], hint: "CI (li) + CD (el), enganxats a l'imperatiu"}
+- {type: cloze, text: "Ens hem de comprar el bitllet. → ___ hem de comprar.", answer: ["ens el"]}
+- {type: choice, text: "Digues la veritat a la Rosa. →", options: ["Digues-li-la.", "Digues-la-hi.", "Digues-li-ho.", "Digues-l'hi."], answer: ["Digues-la-hi."]}
+- {type: choice, text: "Ens expliquen la notícia. →", options: ["Ens l'expliquen.", "Ens la expliquen.", "Ens li expliquen.", "La ens expliquen."], answer: ["Ens l'expliquen."]}
+- {type: choice, text: "Et regalo dues entrades. →", options: ["Te'n regalo dues.", "Te les regalo dues.", "Te'ls regalo dues.", "T'ho regalo dues."], answer: ["Te'n regalo dues."]}
+- {type: choice, text: "Me'n vaig a casa. (anar-se'n + hi) →", options: ["Me n'hi vaig.", "Me n'hi vaig-hi.", "M'hi'n vaig.", "Hi me'n vaig."], answer: ["Me n'hi vaig."]}
+- {type: transform, text: "Reescriu amb pronoms: Deixo el cotxe al meu germà.", answer: ["L'hi deixo."]}
+- {type: transform, text: "Reescriu amb pronoms: Us porto les maletes.", answer: ["Us les porto."]}

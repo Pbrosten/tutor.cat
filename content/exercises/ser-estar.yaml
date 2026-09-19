@@ -1,0 +1,35 @@
+- {type: cloze, text: "La Marta ___ enginyera. (ser/estar)", answer: ["és"]}
+- {type: cloze, text: "Les claus ___ a la taula. (localització)", answer: ["són"]}
+- {type: cloze, text: "Avui ___ molt cansada. (estat temporal, jo)", answer: ["estic"]}
+- {type: cloze, text: "On ___ el lavabo?", answer: ["és"]}
+- {type: cloze, text: "La reunió ___ a la sala gran. (esdeveniment)", answer: ["és"]}
+- {type: cloze, text: "___ sopant, truca més tard. (en curs, nosaltres)", answer: ["estem"]}
+- {type: cloze, text: "L'any passat ___ tres mesos a Irlanda. (durada, jo)", answer: ["vaig estar"]}
+- {type: cloze, text: "La porta ___ oberta. (resultat)", answer: ["està"]}
+- {type: cloze, text: "Aquest cotxe ___ del meu germà. (possessió)", answer: ["és"]}
+- {type: cloze, text: "Com ___? — Bé, gràcies. (tu)", answer: ["estàs"]}
+- {type: cloze, text: "Els meus pares ___ de vacances.", answer: ["estan"]}
+- {type: cloze, text: "Ara mateix el Joan ___ a la feina. (on és ara)", answer: ["és"]}
+- {type: choice, text: "'Dinner is ready':", options: ["El dinar està llest.", "El dinar és llest.", "El dinar és fet.", "El dinar està preparat de."], answer: ["El dinar està llest."]}
+- {type: choice, text: "'She is very clever':", options: ["És molt llesta.", "Està molt llesta.", "És molt llest.", "Està molt llest."], answer: ["És molt llesta."]}
+- {type: choice, text: "'The concert is in the square':", options: ["El concert és a la plaça.", "El concert està a la plaça.", "El concert està en la plaça.", "El concert és en plaça."], answer: ["El concert és a la plaça."]}
+- {type: choice, text: "'This soup is (tastes) really good today':", options: ["Aquesta sopa està boníssima.", "Aquesta sopa és boníssima.", "Aquesta sopa està bona de.", "Aquesta sopa és bo."], answer: ["Aquesta sopa està boníssima."]}
+- {type: cloze, text: "El meu pare ___ de Lleida. (origen)", answer: ["és"]}
+- {type: cloze, text: "Els nens ___ al parc. (localització)", answer: ["són"]}
+- {type: cloze, text: "Avui ___ dijous.", answer: ["és"]}
+- {type: cloze, text: "___ les nou del matí.", answer: ["Són"]}
+- {type: cloze, text: "El got ___ trencat. (resultat)", answer: ["està"]}
+- {type: cloze, text: "Ara ___ plovent. (en curs)", answer: ["està"]}
+- {type: cloze, text: "Aquest estiu ___ un mes a Menorca. (durada, nosaltres, futur)", answer: ["estarem"]}
+- {type: cloze, text: "La Marta ___ casada amb un italià.", answer: ["està"]}
+- {type: cloze, text: "El concert ___ al Palau de la Música. (esdeveniment)", answer: ["és"]}
+- {type: cloze, text: "Aquestes claus ___ meves. (possessió)", answer: ["són"]}
+- {type: cloze, text: "Com ___ la teva mare? — ___ millor, gràcies. (salut)", answer: ["està / està"], hint: "salut → estar"}
+- {type: cloze, text: "El Joan ___ molt alt. (característica)", answer: ["és"]}
+- {type: cloze, text: "Els meus avis ___ de vacances a Roses.", answer: ["estan", "són"]}
+- {type: cloze, text: "On ___ els meus pares? — ___ a la cuina.", answer: ["són / són"], hint: "localització → ser"}
+- {type: choice, text: "'The soup is cold (now)':", options: ["La sopa està freda.", "La sopa és freda.", "La sopa està fred.", "La sopa és fred."], answer: ["La sopa està freda."]}
+- {type: choice, text: "'Snow is cold' (by nature):", options: ["La neu és freda.", "La neu està freda.", "La neu es freda.", "La neu està fred."], answer: ["La neu és freda."]}
+- {type: choice, text: "'Where is the station?':", options: ["On és l'estació?", "On està l'estació?", "On hi ha l'estació?", "On està a l'estació?"], answer: ["On és l'estació?"]}
+- {type: choice, text: "'I'm worried':", options: ["Estic preocupat.", "Soc preocupat.", "Estic preocupant.", "Soc preocupant."], answer: ["Estic preocupat."]}
+- {type: choice, text: "'He is very calm (personality)':", options: ["És molt tranquil.", "Està molt tranquil.", "És molt tranquil·la.", "Està tranquil molt."], answer: ["És molt tranquil."]}

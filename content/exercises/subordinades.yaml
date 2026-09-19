@@ -1,0 +1,33 @@
+- {type: cloze, text: "No vinc ___ estic malalt. (causa)", answer: ["perquè"]}
+- {type: cloze, text: "___ plovia, ens vam quedar a casa. (causa, a l'inici)", answer: ["Com que"]}
+- {type: cloze, text: "T'ho repeteixo perquè ho ___ bé. (entendre, tu)", answer: ["entenguis"]}
+- {type: cloze, text: "Vaig a la biblioteca ___ estudiar. (finalitat, mateix subjecte)", answer: ["per", "per a"]}
+- {type: cloze, text: "Quan ___ a casa, truca'm. (arribar, tu, futur)", answer: ["arribis"]}
+- {type: cloze, text: "Quan ___ a casa, sempre em truca. (arribar, ell, hàbit)", answer: ["arriba"]}
+- {type: cloze, text: "Espera aquí fins que jo ___. (tornar)", answer: ["torni"]}
+- {type: cloze, text: "Renta't les mans abans ___ dinar.", answer: ["de"]}
+- {type: cloze, text: "Renta't les mans abans ___ dinem.", answer: ["que"]}
+- {type: cloze, text: "Encara que ___ fred, sortirem. (fer, hipòtesi de futur)", answer: ["faci"]}
+- {type: cloze, text: "Estava tan cansada ___ es va adormir al sofà.", answer: ["que"]}
+- {type: cloze, text: "Tan bon punt ho ___, t'ho diré. (saber, jo)", answer: ["sàpiga"]}
+- {type: choice, text: "'so that' (finalitat) →", options: ["T'ho dic perquè ho sàpigues.", "T'ho dic perquè ho saps.", "T'ho dic per què ho sàpigues.", "T'ho dic per ho saber."], answer: ["T'ho dic perquè ho sàpigues."]}
+- {type: choice, text: "'because' (causa) →", options: ["No surto perquè plou.", "No surto perquè plogui.", "No surto per què plou.", "No surto com que plou."], answer: ["No surto perquè plou."]}
+- {type: choice, text: "Oració temporal de futur:", options: ["Quan tingui temps, t'ajudaré.", "Quan tindré temps, t'ajudaré.", "Quan tinc temps, t'ajudaré.", "Quan tingués temps, t'ajudaré."], answer: ["Quan tingui temps, t'ajudaré."]}
+- {type: cloze, text: "No he pogut dormir ___ hi havia molt soroll. (causa)", answer: ["perquè", "ja que"]}
+- {type: cloze, text: "___ era tard, vam agafar un taxi. (causa, a l'inici)", answer: ["Com que"]}
+- {type: cloze, text: "Vaig a la botiga ___ comprar pa. (finalitat, mateix subjecte)", answer: ["per", "a"]}
+- {type: cloze, text: "Parla més fort perquè tothom et ___. (sentir)", answer: ["senti"]}
+- {type: cloze, text: "Truca'm quan ___ el tren. (agafar, tu, futur)", answer: ["agafis"]}
+- {type: cloze, text: "Quan ___ petit, vivia a Reus. (ser, jo)", answer: ["era"]}
+- {type: cloze, text: "No marxis fins que no ___ la feina. (acabar, tu)", answer: ["acabis"]}
+- {type: cloze, text: "Mentre ___ la mare, els nens paraven taula. (cuinar)", answer: ["cuinava"]}
+- {type: cloze, text: "Després ___ sopar, mirem una pel·lícula. (+ infinitiu)", answer: ["de"]}
+- {type: cloze, text: "Abans que ___, tanca les finestres. (marxar, tu)", answer: ["marxis"]}
+- {type: cloze, text: "Tan bon punt ___, avisa'm. (arribar, ells)", answer: ["arribin"]}
+- {type: cloze, text: "Encara que ___ molt, no aprova. (estudiar, fet)", answer: ["estudia"]}
+- {type: cloze, text: "Feia tant fred ___ es van gelar les canonades.", answer: ["que"]}
+- {type: cloze, text: "___ que viu aquí, està més content. (des que)", answer: ["Des"]}
+- {type: choice, text: "'because' (darrere de l'oració principal):", options: ["No vinc perquè estic malalt.", "No vinc com que estic malalt.", "No vinc perquè estigui malalt.", "No vinc ja que estigui malalt."], answer: ["No vinc perquè estic malalt."]}
+- {type: choice, text: "'in order to' (subjectes diferents):", options: ["Ho faig perquè tu ho vegis.", "Ho faig per tu ho veus.", "Ho faig per a que tu ho vegis.", "Ho faig perquè tu ho veus."], answer: ["Ho faig perquè tu ho vegis."]}
+- {type: choice, text: "Oració temporal de futur:", options: ["Quan vinguis, soparem.", "Quan vindràs, soparem.", "Quan véns, soparem.", "Quan vinguessis, soparem."], answer: ["Quan vinguis, soparem."]}
+- {type: choice, text: "'Wait until I call you':", options: ["Espera fins que et truqui.", "Espera fins que et trucaré.", "Espera fins que et truco.", "Espera fins et truqui."], answer: ["Espera fins que et truqui."]}

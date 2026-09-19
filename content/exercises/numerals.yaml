@@ -1,0 +1,37 @@
+- {type: cloze, text: "17 → ___", answer: ["disset"]}
+- {type: cloze, text: "18 → ___", answer: ["divuit"]}
+- {type: cloze, text: "22 → ___", answer: ["vint-i-dos"]}
+- {type: cloze, text: "34 → ___", answer: ["trenta-quatre"]}
+- {type: cloze, text: "99 → ___", answer: ["noranta-nou"]}
+- {type: cloze, text: "200 (amb cases, f.) → ___ cases", answer: ["dues-centes"]}
+- {type: cloze, text: "234 → ___", answer: ["dos-cents trenta-quatre"]}
+- {type: cloze, text: "1.200 → ___", answer: ["mil dos-cents"]}
+- {type: cloze, text: "2 (amb noies) → ___ noies", answer: ["dues"]}
+- {type: cloze, text: "21 (amb cadires) → ___ cadires", answer: ["vint-i-una"]}
+- {type: cloze, text: "3r → ___ (m.)", answer: ["tercer"]}
+- {type: cloze, text: "5a → ___ (f.)", answer: ["cinquena"]}
+- {type: cloze, text: "8è → ___", answer: ["vuitè"]}
+- {type: cloze, text: "2,50 € → dos euros ___ cinquanta", answer: ["amb"]}
+- {type: choice, text: "Guionets correctes?", options: ["tres mil cinc-cents vint-i-u", "tres-mil cinc-cents vint-i-u", "tres mil cinc cents vint-i-u", "tres mil cinc-cents-vint-i-u"], answer: ["tres mil cinc-cents vint-i-u"]}
+- {type: choice, text: "Abreviatura de 'quart':", options: ["4t", "4è", "4r", "4a"], answer: ["4t"]}
+- {type: choice, text: "L'1 de maig:", options: ["l'u de maig", "el un de maig", "l'un de maig", "el u de maig"], answer: ["l'u de maig"]}
+- {type: choice, text: "1.000.000.000:", options: ["mil milions", "un bilió", "un miliard", "mil-milions"], answer: ["mil milions"]}
+- {type: cloze, text: "15 → ___", answer: ["quinze"]}
+- {type: cloze, text: "16 → ___", answer: ["setze"]}
+- {type: cloze, text: "19 → ___", answer: ["dinou"]}
+- {type: cloze, text: "45 → ___", answer: ["quaranta-cinc"]}
+- {type: cloze, text: "78 → ___", answer: ["setanta-vuit"]}
+- {type: cloze, text: "101 → ___", answer: ["cent u"]}
+- {type: cloze, text: "500 → ___", answer: ["cinc-cents"]}
+- {type: cloze, text: "1.000.000 → ___", answer: ["un milió"]}
+- {type: cloze, text: "2.024 → ___", answer: ["dos mil vint-i-quatre"]}
+- {type: cloze, text: "300 (amb pàgines, f.) → ___ pàgines", answer: ["tres-centes"]}
+- {type: cloze, text: "1r → ___ (m.)", answer: ["primer"]}
+- {type: cloze, text: "2a → ___ (f.)", answer: ["segona"]}
+- {type: cloze, text: "10è → ___", answer: ["desè"]}
+- {type: cloze, text: "½ hora → ___ hora", answer: ["mitja"]}
+- {type: cloze, text: "'el doble' → el ___", answer: ["doble"]}
+- {type: choice, text: "31 (amb cases):", options: ["trenta-una cases", "trenta-un cases", "trenta-u cases", "trenta i una cases"], answer: ["trenta-una cases"]}
+- {type: choice, text: "Abreviatura de 'segon':", options: ["2n", "2º", "2r", "2è"], answer: ["2n"]}
+- {type: choice, text: "Llegeix 3,50 €:", options: ["tres euros amb cinquanta", "tres euros i mig", "tres coma cinquanta euros", "tres amb cinquanta euros"], answer: ["tres euros amb cinquanta"]}
+- {type: choice, text: "'the 21st century':", options: ["el segle XXI (vint-i-u)", "el segle XXI (vint-i-unè)", "el segle XXI (vint-i-primer)", "el segle XXI (vint-i-una)"], answer: ["el segle XXI (vint-i-u)"]}

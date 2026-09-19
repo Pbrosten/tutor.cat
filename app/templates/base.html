@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Catalan Helper{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.classless.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.4/dist/htmx.min.js"></script>
+  <style>
+    :root { --pico-primary: #b5121b; --pico-primary-hover: #8e0e15; --pico-primary-background: #b5121b; --pico-primary-underline: rgba(181,18,27,.5); --pico-font-size: 100%; }
+    :root:not([data-theme=light]) { --pico-primary: #e0393f; --pico-primary-hover: #ff6b6b; --pico-primary-background: #b5121b; }
+    body > header nav { padding: .25rem 0; }
+    body > header nav a.brand { font-weight: 700; font-size: 1.15rem; color: var(--pico-h1-color); text-decoration: none; }
+    body > header nav a[aria-current] { color: var(--pico-primary); font-weight: 600; }
+    .dot { display: inline-block; min-width: 1.1rem; height: 1.1rem; margin-left: .3rem; padding: 0 .3rem; border-radius: .6rem; vertical-align: text-top;
+      background: var(--pico-primary); color: #fff; font-size: .7rem; font-weight: 700; line-height: 1.1rem; text-align: center; }
+    body > main { padding-top: 0; }
+    h1 { margin-bottom: 1rem; }
+    .muted { color: var(--pico-muted-color); }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+    article.card { margin: 0; }
+    article.card h2 { font-size: 1.2rem; margin-bottom: .5rem; }
+    .tag { display: inline-block; font-size: .8em; padding: .1em .5em; border-radius: 1em; background: var(--pico-card-sectioning-background-color); color: var(--pico-muted-color); }
+    .defs { margin: 0 0 1.5rem; padding: .75rem 1rem; border-left: 3px solid var(--pico-primary); background: var(--pico-card-sectioning-background-color); border-radius: 0 .5rem .5rem 0; }
+    .defs h2 { font-size: 1.1rem; margin: 0 0 .5rem; } .defs h2 small { font-weight: 400; font-size: .8rem; margin-left: .5rem; }
+    .defs ol { margin: 0 0 .25rem; padding-left: 1.4rem; } .defs li { margin: 0; } .defs p { margin: 0; }
+    .vf { cursor: help; border-bottom: 1px dotted transparent; }
+    .vf:hover { border-bottom-color: var(--pico-primary); }
+    .vtip { position: absolute; z-index: 20; padding: .6rem .8rem; font-size: .88rem; line-height: 1.35; background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color); border-radius: .5rem; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+    .vtip .tipverb + .tipverb { margin-top: .5rem; padding-top: .5rem; border-top: 1px solid var(--pico-muted-border-color); }
+    .vtip a { text-decoration: none; } .vtip ol { margin: .2rem 0 0; padding-left: 1.2rem; } .vtip li { margin: 0; }
+    .vtip p { margin: 0; } .vtip a small { font-weight: 400; }
+    /* verb tables */
+    .conj { overflow-x: auto; }
+    .conj table { font-size: .92rem; }
+    .conj th:first-child { position: sticky; left: 0; background: var(--pico-background-color); }
+    .conj thead th { white-space: nowrap; }
+    table.verb { width: auto; font-size: .88rem; float: right; margin: 0 0 1rem 1.5rem; }
+    table.verb caption { font-weight: 600; caption-side: top; padding-bottom: .25rem; }
+    @media (max-width: 40rem) { table.verb { float: none; margin: 1rem 0; } }
+    /* exercises */
+    ol.items { list-style: none; padding: 0; counter-reset: item; }
+    ol.items > li { counter-increment: item; margin-bottom: .75rem; }
+    ol.items > li article { margin: 0; padding: 1rem 1.25rem; }
+    ol.items > li article::before { content: counter(item); float: left; margin: .1rem .75rem 0 0; font-weight: 700; color: var(--pico-muted-color); }
+    .item form { margin: 0; display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; }
+    .item form input:not([type]), .item form input[type=text] { flex: 1 1 12rem; margin: 0; }
+    .item form input[size="40"] { flex-basis: 24rem; }
+    .item form button { width: auto; margin: 0; padding: .4rem 1rem; }
+    .item .parts { display: flex; flex-wrap: wrap; gap: .5rem 1rem; flex: 1 1 100%; }
+    .item .parts label { display: flex; align-items: center; gap: .4rem; margin: 0; flex: 1 1 10rem; max-width: 16rem; }
+    .item .parts label span { font-size: .8rem; color: var(--pico-muted-color); }
+    .item .parts input { margin: 0; }
+    .item .prompt { flex: 1 1 100%; margin: 0; font-size: 1.05rem; }
+    .item .qrow { flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .6rem; }
+    .item .qrow .prompt { flex: 1 1 auto; }
+    .item details.hint { flex: 0 0 auto; order: 1; margin: 0; padding: 0; border: 0; }
+    .item details.hint summary { display: inline-flex; align-items: center; gap: .3rem; width: auto; margin: 0; padding: .1rem .55rem .1rem .45rem;
+      border-radius: 1rem; border: 1px solid var(--pico-muted-border-color); background: var(--pico-card-sectioning-background-color);
+      color: var(--pico-muted-color); font-size: .75rem; line-height: 1.5; cursor: pointer; user-select: none; transition: color .15s, border-color .15s; }
+    .item details.hint summary::after { display: none; }
+    .item details.hint summary::before { content: "💡"; font-size: .85em; filter: grayscale(1) opacity(.7); }
+    .item details.hint summary:hover, .item details.hint[open] summary { color: var(--pico-primary); border-color: var(--pico-primary); }
+    .item details.hint[open] summary::before { filter: none; }
+    .item .hintbody { display: none; order: 2; flex: 1 1 100%; margin: 0 0 .25rem; padding: .5rem .75rem; font-size: .9rem; border-left: 3px solid var(--pico-primary);
+      border-radius: 0 .35rem .35rem 0; background: var(--pico-card-sectioning-background-color); }
+    .item .qrow:has(details[open]) .hintbody { display: block; }
+    .result { font-size: 1.05rem; margin: .25rem 0; }
+    .why { margin: 0; color: var(--pico-muted-color); font-size: .95rem; }
+    .item.right { border-left: 4px solid #1e7d32; } .item.wrong { border-left: 4px solid var(--pico-primary); }
+    .pass { color: #1e7d32; font-weight: 600; }
+    .submitbar { position: sticky; bottom: 0; padding: .75rem 0; background: var(--pico-background-color); }
+    .submitbar button { width: auto; }
+    .ok { color: #1e7d32; font-weight: 600; }
+    .ko { color: var(--pico-primary); font-weight: 600; text-decoration: line-through; }
+    .result b { color: #1e7d32; }
+    .scorebar { position: sticky; top: 0; z-index: 2; background: var(--pico-background-color); padding: .5rem 0; margin-bottom: 1rem; }
+    .scorebar progress { margin: 0; }
+    .scorebar p { display: flex; justify-content: space-between; margin: 0 0 .25rem; }
+    /* guides */
+    article.guide { max-width: 48rem; }
+    article.guide h2 { font-size: 1.35rem; margin-top: 2rem; }
+    article.guide table { font-size: .95rem; }
+    article.guide blockquote { font-style: italic; }
+    .practica a[role=button] { margin: .25rem .25rem 0 0; }
+    .langbar { margin: -.5rem 0 .75rem; } .langbar a { text-decoration: none; }
+    .readbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem 1rem; margin: 0 0 1.25rem; }
+    .readbar .read { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; }
+    .readbar form { margin: 0; }
+    .readbar button, .readbar a[role=button] { width: auto; margin: 0; padding: .3rem .9rem; }
+    .readbar .next { margin-left: auto; }
+    /* guides index: one row per unit */
+    section.module { margin-bottom: 1.75rem; }
+    section.module h2 { font-size: 1.25rem; margin-bottom: .5rem; }
+    .unitlist { display: flex; flex-direction: column; gap: .5rem; }
+    .unit { display: grid; grid-template-columns: 2.6rem 1fr auto; gap: .25rem .9rem; align-items: center; padding: .6rem .9rem;
+      background: var(--pico-card-background-color); border: 1px solid var(--pico-muted-border-color); border-radius: .6rem; }
+    .unum { width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 1.05rem;
+      color: var(--pico-primary); background: color-mix(in srgb, var(--pico-primary) 10%, transparent); }
+    .utitle { font-weight: 600; margin-bottom: .2rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .chip, a.chip:not([role=button]) { display: inline-block; padding: .1rem .6rem; border-radius: 1rem; font-size: .85rem; line-height: 1.5; text-decoration: none;
+      border: 1px solid var(--pico-muted-border-color); --pico-color: var(--pico-h4-color); color: var(--pico-h4-color); background: var(--pico-card-sectioning-background-color); }
+    a.chip:hover { border-color: var(--pico-primary); color: var(--pico-primary); }
+    a.chip.read { border-color: #1e7d32; color: #1e7d32; background: color-mix(in srgb, #1e7d32 8%, transparent); }
+    .chip.seen { border-style: dashed; }
+    .chip.pending { color: var(--pico-muted-color); border-style: dotted; }
+    .uex { width: auto; margin: 0; padding: .35rem .9rem; font-size: .85rem; background: transparent; color: var(--pico-primary); border-color: var(--pico-primary); }
+    .uex:hover { background: var(--pico-primary); color: #fff; }
+    @media (max-width: 40rem) { .unit { grid-template-columns: 2.2rem 1fr; } .unum { width: 2.2rem; height: 2.2rem; font-size: .95rem; } .uex { grid-column: 2; justify-self: start; } }
+    .done { color: #1e7d32; } .seen { color: var(--pico-muted-color); }
+    details.module { margin: .6rem 0 0; padding: 0; border: 0; border-top: 1px solid var(--pico-muted-border-color); }
+    details.module summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem 0; font-weight: 600; }
+    details.module summary::after { margin-left: .5rem; }
+    details.module .mbar { display: flex; align-items: center; gap: .5rem; flex: 0 0 45%; }
+    details.module .mbar progress { height: .4rem; margin: 0; flex: 1; } details.module .mbar small { white-space: nowrap; font-weight: 400; }
+    details.module .chips { padding: 0 0 .75rem; }
+    .stats td.bar { width: 40%; } .stats progress { margin: 0; height: .6rem; }
+    .weak { color: var(--pico-primary); }
+    /* CSS-only tabs (browser style): radios + labels on a baseline, active tab joins the panel below */
+    .tabs { margin-bottom: 1.5rem; }
+    .tabs > input { position: absolute; opacity: 0; pointer-events: none; }
+    .tabs > label { display: inline-block; position: relative; top: 1px; margin: 0 .15rem -1px 0; padding: .45rem 1rem;
+      border: 1px solid transparent; border-bottom: 0; border-radius: .5rem .5rem 0 0; color: var(--pico-muted-color); font-size: .9rem; cursor: pointer; }
+    .tabs > label:hover { color: var(--pico-color); background: var(--pico-card-sectioning-background-color); }
+    .tabs > label small { opacity: .75; margin-left: .25rem; }
+    .tabs > input:focus-visible + label { outline: 2px solid var(--pico-primary); outline-offset: -2px; }
+    .tabs > .shelf { display: none; margin-bottom: 0; padding: 1rem; border: 1px solid var(--pico-muted-border-color); border-radius: 0 .5rem .5rem .5rem;
+      background: var(--pico-card-background-color); }
+    {% for i in range(1, 6) %}.tabs > input:nth-of-type({{ i }}):checked ~ label:nth-of-type({{ i }}) { color: var(--pico-primary); font-weight: 600;
+      background: var(--pico-card-background-color); border-color: var(--pico-muted-border-color); border-bottom: 1px solid var(--pico-card-background-color); z-index: 1; }
+    .tabs > input:nth-of-type({{ i }}):checked ~ .shelf:nth-of-type({{ i }}) { display: grid; }
+    {% endfor %}
+    .shelf, .newbadges { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .6rem; margin-bottom: 1.5rem; }
+    .badge { display: grid; grid-template-columns: 2.2rem 1fr; grid-template-rows: auto auto; column-gap: .6rem; align-items: center;
+      padding: .55rem .7rem; border: 1px solid var(--pico-muted-border-color); border-radius: .6rem; background: var(--pico-card-background-color);
+      opacity: .45; filter: grayscale(1); }
+    .badge.earned { opacity: 1; filter: none; border-color: var(--pico-primary); box-shadow: 0 0 0 2px color-mix(in srgb, var(--pico-primary) 15%, transparent); }
+    .badge .icon { grid-row: span 2; font-size: 1.7rem; text-align: center; }
+    .badge b { font-size: .95rem; line-height: 1.2; } .badge small { color: var(--pico-muted-color); font-size: .78rem; line-height: 1.25; }
+    .toasts { position: fixed; right: 1rem; bottom: 1rem; z-index: 10; display: flex; flex-direction: column; gap: .5rem; max-width: 22rem; }
+    .toast { display: grid; grid-template-columns: 2.2rem 1fr; column-gap: .6rem; align-items: center; padding: .6rem .8rem; text-decoration: none;
+      color: var(--pico-color); background: var(--pico-card-background-color); border: 1px solid var(--pico-primary); border-radius: .6rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,.18); animation: toast 7s ease-in-out both; }
+    .toast .icon { font-size: 1.7rem; text-align: center; } .toast small { color: var(--pico-muted-color); }
+    @keyframes toast { 0% { transform: translateY(1rem); opacity: 0; } 8%, 85% { transform: none; opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+    .newbadges .badge { animation: pop .4s ease-out; } @keyframes pop { from { transform: scale(.9); opacity: 0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul><li><a class="brand" href="/">Catalan Helper</a> <span class="tag">B1 · Elemental</span></li></ul>
+      <ul>
+        {% for href, label in [("/guies", "Guies"), ("/verbs", "Verbs"), ("/exercicis", "Exercicis"), ("/perfil", user_of(request) or "Perfil")] %}
+        <li><a href="{{ href }}"{% if request.url.path.startswith(href) %} aria-current="page"{% endif %}>{{ label }}{% if href == "/perfil" and unseen_badges(request) %}<span class="dot" title="Badges nous">{{ unseen_badges(request) }}</span>{% endif %}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  {% if request.state.toasts %}<div class="toasts" role="status">{% for b in request.state.toasts %}
+    <a class="toast" href="/perfil" style="animation-delay: {{ loop.index0 * 0.3 }}s"><span class="icon">{{ b.icon }}</span><span><b>Nou badge: {{ b.name }}</b><br><small>{{ b.desc }}</small></span></a>
+  {% endfor %}</div>{% endif %}
+  <div id="vtip" class="vtip" hidden></div>
+  <script>
+  // Definition tooltip for any <span class="vf" data-lemma> (verb forms in guides and exercises). Fetched once per lemma set.
+  (() => {
+    const tip = document.getElementById("vtip"), cache = {};
+    let cur = null, hideT = null;
+    const place = el => { const r = el.getBoundingClientRect(), w = Math.min(360, innerWidth - 24);
+      tip.style.width = w + "px"; tip.style.left = Math.max(12, Math.min(r.left, innerWidth - w - 12)) + scrollX + "px";
+      tip.style.top = (r.bottom + 6 + scrollY) + "px"; };
+    const show = async el => { cur = el; clearTimeout(hideT); const k = el.dataset.lemma;
+      if (!cache[k]) cache[k] = fetch("/verbs/tip/" + encodeURIComponent(k)).then(r => r.ok ? r.text() : "");
+      const html = await cache[k]; if (cur !== el || !html) return;
+      tip.innerHTML = html; tip.hidden = false; place(el); };
+    const hide = () => { hideT = setTimeout(() => { tip.hidden = true; cur = null; }, 250); };
+    document.addEventListener("mouseover", e => { const el = e.target.closest(".vf"); if (el) show(el); });
+    document.addEventListener("mouseout", e => { if (e.target.closest(".vf") && !e.relatedTarget?.closest("#vtip")) hide(); });
+    document.addEventListener("click", e => { const el = e.target.closest(".vf"); if (el) { e.preventDefault(); cur === el && !tip.hidden ? (tip.hidden = true, cur = null) : show(el); }
+      else if (!e.target.closest("#vtip")) tip.hidden = true; });
+    tip.addEventListener("mouseenter", () => clearTimeout(hideT)); tip.addEventListener("mouseleave", hide);
+  })();
+  </script>
+  <footer><small class="muted">Dades verbals: <a href="https://github.com/Softcatala/catalan-dict-tools">Softcatalà · catalan-dict-tools</a> (GPL/LGPL). Continguts segons el currículum de nivell elemental (CPNL) i <em>Passos 2</em>.</small></footer>
+</body>
+</html>

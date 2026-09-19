@@ -1,0 +1,36 @@
+- {type: cloze, text: "Demà tinc un examen: ___ estudiar molt. (haver de, jo)", answer: ["he d'", "haig d'"]}
+- {type: cloze, text: "___ que arribeu abans de les nou. (caldre)", answer: ["cal"]}
+- {type: cloze, text: "Ara mateix no puc parlar: ___ dinant. (estar, jo)", answer: ["estic"]}
+- {type: cloze, text: "Vaig ___ fumar fa dos anys. (deixar)", answer: ["deixar de"]}
+- {type: cloze, text: "No trobo les claus. ___ ser al cotxe. (deure)", answer: ["deuen"]}
+- {type: cloze, text: "___ de sopar i encara tinc gana! (acabar, nosaltres)", answer: ["acabem"]}
+- {type: cloze, text: "El nen ___ a caminar el mes passat. (començar)", answer: ["va començar"]}
+- {type: cloze, text: "Si no contesta, ___ a trucar més tard. (tornar, jo, futur)", answer: ["tornaré"]}
+- {type: cloze, text: "Espera un moment, ___ a punt d'acabar. (estar, jo)", answer: ["estic"]}
+- {type: cloze, text: "La Marta ___ nedar molt bé. (saber)", answer: ["sap"]}
+- {type: choice, text: "Obligació personal:", options: ["He de marxar.", "Tinc que marxar.", "Dec marxar.", "Cal de marxar."], answer: ["He de marxar."]}
+- {type: choice, text: "'It must be late' (probabilitat):", options: ["Deu ser tard.", "Ha de ser tard.", "Cal que sigui tard.", "Deu de ser tard."], answer: ["Deu ser tard."]}
+- {type: choice, text: "'He has just arrived':", options: ["Acaba d'arribar.", "Acaba arribant.", "Va acabar d'arribar.", "Ha acabat arribant."], answer: ["Acaba d'arribar."]}
+- {type: choice, text: "'It keeps raining':", options: ["Continua plovent.", "Continua a ploure.", "Segueix de ploure.", "Torna plovent."], answer: ["Continua plovent."]}
+- {type: choice, text: "Necessitat impersonal:", options: ["Cal estudiar.", "Es cal estudiar.", "Ha d'estudiar-se.", "Cal d'estudiar."], answer: ["Cal estudiar."]}
+- {type: transform, text: "Canvia el pronom de lloc: Ho he de fer. →", answer: ["He de fer-ho."], hint: "enganxa'l a l'infinitiu"}
+- {type: transform, text: "Canvia el pronom de lloc: Vull comprar-la. →", answer: ["La vull comprar."], hint: "davant de l'auxiliar"}
+- {type: cloze, text: "Els alumnes ___ portar el llibre. (haver de, ells)", answer: ["han de"]}
+- {type: cloze, text: "___ que truquis al metge. (caldre)", answer: ["cal"]}
+- {type: cloze, text: "Ahir ___ que anar al banc. (haver de, jo, passat perifràstic)", answer: ["vaig haver d'"]}
+- {type: cloze, text: "Quan vaig arribar, ___ sopant. (estar, ells, imperfet)", answer: ["estaven"]}
+- {type: cloze, text: "El Marc ___ de sortir; ja no hi és. (acabar)", answer: ["acaba"]}
+- {type: cloze, text: "Si no ho entens, ___ a llegir-ho. (tornar, imperatiu tu)", answer: ["torna"]}
+- {type: cloze, text: "No ___ de pensar en l'examen. (deixar, jo)", answer: ["deixo"]}
+- {type: cloze, text: "El temps ___ millorant a poc a poc. (anar)", answer: ["va"]}
+- {type: cloze, text: "___ ser les vuit; encara no és fosc. (deure, probabilitat)", answer: ["deuen"]}
+- {type: cloze, text: "Va ___ per no venir. (acabar + gerundi: resultat final)", answer: ["acabar"]}
+- {type: cloze, text: "Vols venir? — No ___, tinc feina. (poder, jo)", answer: ["puc"]}
+- {type: cloze, text: "Estem ___ punt de marxar. (imminència)", answer: ["a"]}
+- {type: choice, text: "'You have to sign here' (vostè):", options: ["Ha de signar aquí.", "Té que signar aquí.", "Deu signar aquí.", "Cal que signa aquí."], answer: ["Ha de signar aquí."]}
+- {type: choice, text: "'She must be at home' (probabilitat):", options: ["Deu ser a casa.", "Ha de ser a casa.", "Deu de ser a casa.", "Cal que sigui a casa."], answer: ["Deu ser a casa."]}
+- {type: choice, text: "'We've just eaten':", options: ["Acabem de menjar.", "Acabem menjant.", "Vam acabar de menjar.", "Hem acabat menjant."], answer: ["Acabem de menjar."]}
+- {type: choice, text: "'Stop shouting!':", options: ["Deixa de cridar!", "Para a cridar!", "Deixa cridant!", "Deixa a cridar!"], answer: ["Deixa de cridar!"]}
+- {type: choice, text: "'It's starting to rain':", options: ["Comença a ploure.", "Comença ploure.", "Comença de ploure.", "Comença plovent."], answer: ["Comença a ploure."]}
+- {type: transform, text: "Canvia el pronom de lloc: Ho estic llegint. →", answer: ["Estic llegint-ho."]}
+- {type: transform, text: "Canvia el pronom de lloc: Vull veure't. →", answer: ["Et vull veure."]}

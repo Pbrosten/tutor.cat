@@ -1,0 +1,32 @@
+- {type: cloze, text: "La noia ___ canta és la meva veïna.", answer: ["que"]}
+- {type: cloze, text: "El llibre ___ llegeixo és molt bo.", answer: ["que"]}
+- {type: cloze, text: "La ciutat ___ visc és petita. (lloc)", answer: ["on", "en què"]}
+- {type: cloze, text: "L'amic amb ___ vaig de vacances és de Vic.", answer: ["qui"]}
+- {type: cloze, text: "El tema de ___ parlem és difícil.", answer: ["què"]}
+- {type: cloze, text: "No entenc ___ dius. (what)", answer: ["el que", "allò que"]}
+- {type: cloze, text: "L'eina amb ___ ho he arreglat.", answer: ["què"]}
+- {type: cloze, text: "El metge a ___ vaig anar és molt bo.", answer: ["qui"]}
+- {type: cloze, text: "___ no vulgui venir, que ho digui. (whoever)", answer: ["Qui"]}
+- {type: cloze, text: "Va arribar tard, ___ em va molestar. (la qual cosa)", answer: ["la qual cosa", "cosa que"]}
+- {type: choice, text: "Frase correcta:", options: ["El noi amb qui parlo.", "El noi amb que parlo.", "El noi amb el que parlo.", "El noi que amb parlo."], answer: ["El noi amb qui parlo."]}
+- {type: choice, text: "Frase correcta:", options: ["La casa en què visc.", "La casa en que visc.", "La casa en la que visc.", "La casa què visc."], answer: ["La casa en què visc."]}
+- {type: choice, text: "Frase correcta:", options: ["Fes el que vulguis.", "Fes lo que vulguis.", "Fes que vulguis.", "Fes allò vulguis."], answer: ["Fes el que vulguis."]}
+- {type: transform, text: "Uneix amb un relatiu: Visc en un pis. El pis és petit. →", answer: ["El pis on visc és petit.", "El pis en què visc és petit."]}
+- {type: transform, text: "Uneix amb un relatiu: Parlo amb una noia. La noia és italiana. →", answer: ["La noia amb qui parlo és italiana."]}
+- {type: cloze, text: "El cotxe ___ vam comprar és vermell.", answer: ["que"]}
+- {type: cloze, text: "La platja ___ anàvem de petits ja no existeix. (lloc)", answer: ["on", "a què"]}
+- {type: cloze, text: "El professor amb ___ vaig estudiar és jubilat.", answer: ["qui"]}
+- {type: cloze, text: "El projecte en ___ treballo és molt interessant.", answer: ["què"]}
+- {type: cloze, text: "Els nens ___ juguen al parc són els meus nebots.", answer: ["que"]}
+- {type: cloze, text: "La raó per ___ no vaig venir és senzilla.", answer: ["què"]}
+- {type: cloze, text: "Les persones de ___ et parlava són aquestes.", answer: ["qui"]}
+- {type: cloze, text: "Això és tot ___ sé. (all that)", answer: ["el que"]}
+- {type: cloze, text: "El poble ___ visc té mil habitants.", answer: ["on", "en què"]}
+- {type: cloze, text: "El llibre ___ et vaig deixar és meu.", answer: ["que"]}
+- {type: cloze, text: "___ vulgui venir, que s'apunti. (whoever)", answer: ["Qui"]}
+- {type: choice, text: "Frase correcta:", options: ["La ciutat on vaig néixer.", "La ciutat que vaig néixer.", "La ciutat en que vaig néixer.", "La ciutat a on vaig néixer."], answer: ["La ciutat on vaig néixer."]}
+- {type: choice, text: "Frase correcta:", options: ["L'amiga de qui et parlo viu a Vic.", "L'amiga de que et parlo viu a Vic.", "L'amiga de la que et parlo viu a Vic.", "L'amiga que et parlo viu a Vic."], answer: ["L'amiga de qui et parlo viu a Vic."]}
+- {type: choice, text: "Frase correcta:", options: ["No sé el que vol dir.", "No sé lo que vol dir.", "No sé que vol dir el.", "No sé allò vol dir."], answer: ["No sé el que vol dir."]}
+- {type: choice, text: "Frase correcta:", options: ["El motiu pel qual va marxar.", "El motiu pel que va marxar.", "El motiu per que va marxar.", "El motiu per el qual va marxar."], answer: ["El motiu pel qual va marxar."]}
+- {type: transform, text: "Uneix amb un relatiu: Treballo en una empresa. L'empresa és alemanya. →", answer: ["L'empresa on treballo és alemanya.", "L'empresa en què treballo és alemanya."]}
+- {type: transform, text: "Uneix amb un relatiu: Vaig veure una pel·lícula. La pel·lícula era molt bona. →", answer: ["La pel·lícula que vaig veure era molt bona."]}

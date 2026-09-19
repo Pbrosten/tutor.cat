@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}{{ g.title }} — Guies{% endblock %}
+{% block content %}
+<article class="guide"{% if lang == "en" %} lang="en"{% endif %}>
+<h1>{{ g.title }}</h1>
+{% if has_en %}<p class="langbar"><small>{% if lang == "en" %}<a href="?">Català</a> · <b>English</b>{% else %}<b>Català</b> · <a href="?lang=en">English</a>{% endif %}</small></p>{% endif %}
+<div class="readbar">
+  <div class="read">
+  {% if not user_of(request) %}
+    <button disabled>Marca com a llegida</button>
+    <small class="muted">Cal un <a href="/perfil">perfil</a> per marcar guies com a llegides.</small>
+  {% elif passed %}
+    <form method="post" action="/guies/{{ g.slug }}/llegida">
+      <button class="{{ 'secondary' if status.read else 'outline' }}">{{ '✓ Llegida — desmarca' if status.read else 'Marca com a llegida' }}</button>
+    </form>
+    <small class="muted">{{ passed.rounds }} sèries superades · millor: {{ passed.best.correct }} / {{ passed.best.n }}</small>
+  {% else %}
+    <button disabled>Marca com a llegida</button>
+    <small class="muted">Primer supera <a href="/exercicis/sessio?guia={{ g.slug }}">{{ pass_rounds }} sèries de {{ pass_n }} exercicis</a> amb {{ pass_score }} encerts o més ({{ rounds }} / {{ pass_rounds }}).</small>
+  {% endif %}
+  </div>
+  {% if next %}
+    {% if status.read %}<a role="button" class="next" href="/guies/{{ next.slug }}{% if lang == "en" %}?lang=en{% endif %}" title="{{ next.title }}">Següent →</a>
+    {% else %}<button class="next" disabled title="{{ next.title }} — es desbloqueja quan marquis aquesta guia com a llegida">Següent →</button>{% endif %}
+  {% else %}<small class="muted next">Última guia del nivell</small>{% endif %}
+</div>
+{{ g.html|safe }}
+</article>
+{% if g.exercises %}
+<section class="practica">
+  <h2>Practica</h2>
+  <a role="button" href="/exercicis/sessio?guia={{ g.slug }}">Sèrie de la guia ({{ pass_n }} ítems)</a>
+  {% for k in g.exercises %}<a role="button" class="outline" href="/exercicis/sessio?tema={{ k }}">{{ topics.get(k, k) }}</a>{% endfor %}
+</section>
+{% endif %}
+{% endblock %}

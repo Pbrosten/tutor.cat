@@ -1,0 +1,8 @@
+{% if ids %}
+<p><strong>{{ q }}</strong> →
+{% for i in ids %}<a href="/verbs/{{ i.lemma }}">{{ i.lemma }}</a> <span class="muted">{{ i.mood }} {{ i.tense }}{% if i.label %}, {{ i.label }}{% endif %}</span>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% endif %}
+{% if hits %}
+<div class="grid">{% for h in hits %}<a href="/verbs/{{ h.lemma }}">{{ h.lemma }}{% if h.reflexive %}-se{% endif %}</a>{% endfor %}</div>
+{% endif %}
+{% if q and not hits and not ids %}<p class="muted">Cap resultat per «{{ q }}».</p>{% endif %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ c.verb.lemma }} — Conjugador{% endblock %}
+{% block content %}
+<hgroup>
+  <h1>{{ c.nonfinite.infinitiu }}</h1>
+  <p>gerundi <strong>{{ c.nonfinite.gerundi }}</strong> · participi <strong>{{ c.nonfinite.participi }}</strong> · model <em>{{ c.verb.model }}</em></p>
+</hgroup>
+<section class="defs">
+  <h2>Definició <small>{% if def_lang == "en" %}<a href="?{{ 'tot=1&' if all }}def_lang=ca">Català</a> · <b>English</b>{% else %}<b>Català</b> · <a href="?{{ 'tot=1&' if all }}def_lang=en">English</a>{% endif %}</small></h2>
+  {% set d = defs[def_lang] %}
+  {% if d %}<ol{% if def_lang == "en" %} lang="en"{% endif %}>{% for x in d %}<li>{{ x }}</li>{% endfor %}</ol>
+  {% else %}<p class="muted">{% if def_lang == "en" %}No English definition found on Wiktionary.{% else %}No s'ha trobat cap definició al Viccionari (o no hi ha connexió).{% endif %}</p>{% endif %}
+  <p class="muted"><small>Font: {% if def_lang == "en" %}<a href="https://en.wiktionary.org/wiki/{{ c.verb.lemma }}#Catalan">en.wiktionary.org</a>{% else %}<a href="https://ca.wiktionary.org/wiki/{{ c.verb.lemma }}">Viccionari</a>{% endif %} (CC BY-SA)</small></p>
+</section>
+<p>{% if all %}<a role="button" class="secondary" href="?{{ 'def_lang=en' if def_lang == 'en' }}">Mostra només els temps B1</a>{% else %}<a role="button" class="outline" href="?tot=1{{ '&def_lang=en' if def_lang == 'en' }}">Mostra tots els temps</a>{% endif %}</p>
+{% for mood, tenses in c.tables.items() if tenses %}
+<h2>{{ mood|capitalize }}</h2>
+<div class="conj"><table class="striped">
+  <thead><tr><th></th>{% for t in tenses %}<th>{{ t or mood }}</th>{% endfor %}</tr></thead>
+  <tbody>
+  {% for p in persons %}
+  {% set i = loop.index0 %}
+  <tr><th>{{ p }}</th>{% for forms in tenses.values() %}<td>{{ forms[i] }}</td>{% endfor %}</tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endfor %}
+{% endblock %}

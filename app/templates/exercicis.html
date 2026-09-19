@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Exercicis — Catalan Helper{% endblock %}
+{% block content %}
+<hgroup>
+  <h1>Exercicis</h1>
+  <p>Tria un tema o una unitat. Cada sèrie es genera de nou; els errors enllacen a la guia.</p>
+</hgroup>
+<div class="grid">
+  <article class="card">
+    <h2>Per tema</h2>
+    <form action="/exercicis/sessio">
+      <select name="tema" aria-label="Tema">{% for k, v in topics.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}</select>
+      <label>Ítems <input type="number" name="n" value="10" min="1" max="50"></label>
+      <button>Comença</button>
+    </form>
+  </article>
+  <article class="card">
+    <h2>Per unitat</h2>
+    <form action="/exercicis/sessio">
+      <select name="unitat" aria-label="Unitat">
+        {% for m in modules %}<optgroup label="{{ m.name }}">{% for u in m.units %}<option value="{{ u.n }}">Unitat {{ u.n }}{% if u.title %} — {{ u.title }}{% endif %}</option>{% endfor %}</optgroup>{% endfor %}
+      </select>
+      <label>Ítems <input type="number" name="n" value="10" min="1" max="50"></label>
+      <button>Comença</button>
+    </form>
+  </article>
+  <article class="card">
+    <h2>Sèrie personalitzada</h2>
+    {% if not user_of(request) %}
+      <p class="muted">Tria un <a href="/perfil">perfil</a> per generar sèries a partir dels teus errors.</p>
+    {% elif weak %}
+      <p>Temes on falles més: {% for k in weak %}<span class="weak">{{ topics[k] }}</span>{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+      <form action="/exercicis/sessio"><input type="hidden" name="personal" value="1">
+        <label>Ítems <input type="number" name="n" value="10" min="1" max="50"></label><button>Comença</button></form>
+    {% else %}
+      <p class="muted">Encara no hi ha prou respostes (calen 5 per tema). Practica i torna.</p>
+    {% endif %}
+    {% if sets %}<h3 style="font-size:1rem">Sèries desades</h3>
+      {% for s in sets %}<a role="button" class="outline" href="/exercicis/sessio?set={{ s.id }}">{{ s.name }}</a> {% endfor %}{% endif %}
+  </article>
+</div>
+{% endblock %}

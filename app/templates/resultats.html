@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Resultats — {{ title }}{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+<div class="scorebar">
+  <p><span><strong>{{ correct }}</strong> / {{ results|length }} encerts</span>
+     <span><a href="/exercicis/sessio?{{ query }}">Nova sèrie</a> · <a href="/exercicis">Temes</a></span></p>
+  <progress value="{{ correct }}" max="{{ results|length }}"></progress>
+</div>
+{% if new_badges %}<div class="newbadges">{% for b in new_badges %}<span class="badge earned"><span class="icon">{{ b.icon }}</span><b>Nou badge: {{ b.name }}</b><small>{{ b.desc }}</small></span>{% endfor %}</div>{% endif %}
+{% if guia %}
+  {% if passed %}<p class="pass">✓ Sèrie superada ({{ rounds }} / {{ pass_rounds }}). Ja pots <a href="/guies/{{ guia }}">marcar «{{ guide_title }}» com a llegida</a>.</p>
+  {% elif qualified %}<p class="pass">✓ Sèrie superada ({{ rounds }} / {{ pass_rounds }}). <a href="/exercicis/sessio?{{ query }}">Supera'n una altra</a> per poder marcar «{{ guide_title }}» com a llegida.</p>
+  {% else %}<p class="muted">Per marcar «{{ guide_title }}» com a llegida calen {{ pass_rounds }} sèries amb el 70 % d'encerts o més ({{ rounds }} / {{ pass_rounds }} fins ara). <a href="/exercicis/sessio?{{ query }}">Torna-ho a provar</a> o <a href="/guies/{{ guia }}">rellegeix la guia</a>.</p>{% endif %}
+{% endif %}
+<ol class="items">
+{% for r in results %}
+<li><article class="item {{ 'right' if r.ok else 'wrong' }}">
+  <p class="prompt">{{ r.prompt|verbtips|safe }}</p>
+  {% if r.ok %}
+    <p class="result"><span class="ok">✓</span> {{ r.sentence|verbtips|safe }}</p>
+  {% else %}
+    <p class="result"><span class="ko">{{ r.given or '—' }}</span> → <b>{{ r.sentence|verbtips|safe }}</b>{% if r.answer|length > 1 %} <small class="muted">(també: {{ r.answer[1:]|join(' / ') }})</small>{% endif %}</p>
+    <p class="why">{{ r.why }} <a href="/guies/{{ r.guide }}">guia ↗</a></p>
+  {% endif %}
+</article></li>
+{% endfor %}
+</ol>
+{% endblock %}

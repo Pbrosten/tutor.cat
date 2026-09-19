@@ -1,0 +1,37 @@
+- {type: cloze, text: "dir → gerundi: ___", answer: ["dient"]}
+- {type: cloze, text: "fer → gerundi: ___", answer: ["fent"]}
+- {type: cloze, text: "escriure → gerundi: ___", answer: ["escrivint"]}
+- {type: cloze, text: "beure → gerundi: ___", answer: ["bevent"]}
+- {type: cloze, text: "riure → gerundi: ___", answer: ["rient"]}
+- {type: cloze, text: "obrir → participi: ___", answer: ["obert"]}
+- {type: cloze, text: "escriure → participi: ___", answer: ["escrit"]}
+- {type: cloze, text: "prendre → participi: ___", answer: ["pres"]}
+- {type: cloze, text: "néixer → participi: ___", answer: ["nascut"]}
+- {type: cloze, text: "encendre → participi: ___", answer: ["encès"]}
+- {type: cloze, text: "Les finestres estan ___. (obrir, concordança)", answer: ["obertes"]}
+- {type: cloze, text: "Una carta ___ a mà. (escriure, concordança)", answer: ["escrita"]}
+- {type: cloze, text: "Estic ___ un llibre boníssim. (llegir)", answer: ["llegint"]}
+- {type: choice, text: "Correcta:", options: ["Va caure i es va trencar el braç.", "Va caure trencant-se el braç.", "Va caure, trencant el braç.", "Caient es va trencar el braç després."], answer: ["Va caure i es va trencar el braç."]}
+- {type: choice, text: "Correcta:", options: ["una caixa que conté llibres", "una caixa contenint llibres", "una caixa continguent llibres", "una caixa contenent llibres"], answer: ["una caixa que conté llibres"]}
+- {type: choice, text: "'boiling water':", options: ["aigua bullent", "aigua bullint", "aigua bullida", "aigua que bullint"], answer: ["aigua bullent"]}
+- {type: choice, text: "Participi de 'veure':", options: ["vist", "veut", "vegut", "veït"], answer: ["vist"]}
+- {type: cloze, text: "veure → gerundi: ___", answer: ["veient"]}
+- {type: cloze, text: "creure → gerundi: ___", answer: ["creient"]}
+- {type: cloze, text: "viure → gerundi: ___", answer: ["vivint"]}
+- {type: cloze, text: "conèixer → gerundi: ___", answer: ["coneixent"]}
+- {type: cloze, text: "tenir → gerundi: ___", answer: ["tenint"]}
+- {type: cloze, text: "ser → gerundi: ___", answer: ["sent", "essent"]}
+- {type: cloze, text: "morir → participi: ___", answer: ["mort"]}
+- {type: cloze, text: "aprendre → participi: ___", answer: ["après"]}
+- {type: cloze, text: "cobrir → participi: ___", answer: ["cobert"]}
+- {type: cloze, text: "venir → participi: ___", answer: ["vingut"]}
+- {type: cloze, text: "resoldre → participi: ___", answer: ["resolt"]}
+- {type: cloze, text: "coure → participi: ___", answer: ["cuit"]}
+- {type: cloze, text: "Les cartes ja estan ___. (escriure, concordança)", answer: ["escrites"]}
+- {type: cloze, text: "Els llums estan ___. (encendre, concordança)", answer: ["encesos"]}
+- {type: cloze, text: "Tot ___, parlàvem del viatge. (tot + gerundi)", answer: ["caminant"]}
+- {type: cloze, text: "Ho vaig aprendre ___. (manera)", answer: ["practicant"]}
+- {type: choice, text: "Correcta:", options: ["Va sortir de casa i va agafar el tren.", "Va sortir de casa agafant el tren.", "Sortint de casa va agafar després el tren.", "Va sortir de casa, agafant el tren."], answer: ["Va sortir de casa i va agafar el tren."]}
+- {type: choice, text: "'a letter containing errors':", options: ["una carta que conté errors", "una carta contenint errors", "una carta continguent errors", "una carta contenent errors"], answer: ["una carta que conté errors"]}
+- {type: choice, text: "Participi de 'dir':", options: ["dit", "digut", "dicit", "diut"], answer: ["dit"]}
+- {type: choice, text: "Participi de 'obrir':", options: ["obert", "obrit", "obrut", "oberts"], answer: ["obert"]}
