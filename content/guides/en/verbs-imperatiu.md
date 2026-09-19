@@ -7,6 +7,8 @@ Five persons: **tu, vostè, nosaltres, vosaltres, vostès**. There is no *jo*.
 
 ## Affirmative
 
+{{verb tenir imperatiu}}
+
 | person | rule | cantar | perdre | dormir | servir |
 |---|---|---|---|---|---|
 | tu | = present indicative, 3rd sing. | cant**a** | perd | dorm | serv**eix** |
@@ -33,8 +35,6 @@ Irregulars — *tu* and *vosaltres* need learning; *vostè / nosaltres / vostès
 | sortir | **surt** | sortiu | surti |
 | obrir | **obre** | obriu | obri |
 | beure | **beu** | beveu | begui |
-
-{{verb tenir imperatiu}}
 
 ## Negative = no + present subjunctive, all persons
 

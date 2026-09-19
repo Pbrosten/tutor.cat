@@ -10,6 +10,8 @@ El subjuntiu apareix en una **oració subordinada** (després de *que*) quan l'o
 
 ## Formes
 
+{{verb tenir subjuntiu-present}}
+
 Les terminacions canvien la vocal respecte del present d'indicatiu: tots els verbs prenen **-i**, però amb arrels diferents.
 
 | | cantar | perdre | dormir | servir (incoatiu) |
@@ -26,8 +28,6 @@ Les terminacions canvien la vocal respecte del present d'indicatiu: tots els ver
 Arrels irregulars (la 1a persona del singular de l'indicatiu sol donar l'arrel: tinc → tingui):
 
 **ser → sigui · estar → estigui · anar → vagi · fer → faci · tenir → tingui · venir → vingui · poder → pugui · voler → vulgui · saber → sàpiga · dir → digui · veure → vegi · haver → hagi · caldre → calgui · beure → begui · viure → visqui · conèixer → conegui · dur → dugui · treure → tregui**
-
-{{verb tenir subjuntiu-present}}
 
 ## Quan el fem servir (B1)
 

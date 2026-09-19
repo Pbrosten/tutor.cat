@@ -39,15 +39,32 @@ def guide(slug, lang="ca"):
         return None
     body = _guide_path(slug, lang).read_text().split("---", 2)[2]
     body = re.sub(r"\{\{verb (\S+) (\S+)\}\}", lambda m: _verb_table(m[1], m[2]), body)
-    html = tips.annotate_html(markdown.markdown(body, extensions=["tables", "toc"]))  # toc: gives the h2s ids to link to
-    return {**meta, "html": html, "toc": re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', html)}
+    html = _annotate(markdown.markdown(body, extensions=["tables", "toc"]))  # toc: gives the h2s ids to link to
+    toc = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', html)
+    return {**meta, "html": _sections(html), "toc": toc}
+
+
+VERB_TABLE = re.compile(r'(<table class="verb.*?</table>)', re.S)  # capturing: split keeps the tables
+
+
+def _annotate(html):
+    """Tooltips everywhere but inside a conjugation table: its cells are bare forms, not running text.
+    The caption is annotated in _verb_table, so the lemma there keeps its tooltip."""
+    return "".join(p if p.startswith('<table class="verb') else tips.annotate_html(p)
+                   for p in VERB_TABLE.split(html))
+
+
+def _sections(html):
+    """Wrap each h2..next-h2 run in a <section>, so CSS can put a verb table beside its own section's text."""
+    return "".join(f'<section class="sect">{p}</section>' if p.startswith("<h2 ") else p
+                   for p in re.split(r"(?=<h2 )", html))
 
 
 def _verb_table(lemma, key):
     mood, tense = exercises.TENSES[key]
     forms = verbs.conjugation(lemma, all_tenses=True)["tables"][mood][tense]
     rows = "".join(f"<tr><th>{p}</th><td>{f}</td></tr>" for p, f in zip(verbs.PERSONS, forms))
-    return f'<table class="verb striped"><caption>{lemma} — {tense or mood}</caption>{rows}</table>'
+    return f'<table class="verb striped"><caption>{tips.annotate_text(lemma)} — {tense or mood}</caption>{rows}</table>'
 
 
 @lru_cache  # ponytail: banks reload on container restart; drop the cache if editing YAML live gets annoying

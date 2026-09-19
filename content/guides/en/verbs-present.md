@@ -22,6 +22,8 @@ Pure -ir verbs are few: **dormir, sortir (surto), obrir (obro), omplir, cosir, c
 
 ## Irregulars you cannot avoid
 
+{{verb sortir present}}
+
 | | ser | estar | tenir | fer | anar | venir |
 |---|---|---|---|---|---|---|
 | jo | soc | estic | tinc | faig | vaig | vinc |
@@ -41,8 +43,6 @@ Pure -ir verbs are few: **dormir, sortir (surto), obrir (obro), omplir, cosir, c
 | ells | poden | volen | saben | diuen | veuen | han |
 
 Also: **conèixer** → conec, coneixes… · **viure** → visc, vius, viu, vivim, viviu, viuen · **beure** → bec, beus, beu, bevem, beveu, beuen · **escriure** → escric, escrius, escriu, escrivim, escriviu, escriuen · **dur** → duc, duus, duu · **caure** → caic · **riure** → ric.
-
-{{verb sortir present}}
 
 ## Uses
 

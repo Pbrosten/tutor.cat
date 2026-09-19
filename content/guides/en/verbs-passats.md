@@ -7,6 +7,8 @@ Catalan B1 uses three past tenses constantly. Two of them describe *completed* a
 
 ## Passat perifràstic — completed, in a period that is over
 
+{{verb cantar passat-perifrastic}}
+
 **vaig / vas / va / vam / vau / van** + **infinitive**. The auxiliary is *anar*, but it has nothing to do with going.
 
 Time markers: **ahir, la setmana passada, l'any passat, fa dos dies, dissabte, el 2019, quan tenia deu anys**.
@@ -15,9 +17,9 @@ Time markers: **ahir, la setmana passada, l'any passat, fa dos dies, dissabte, e
 - L'any passat **vaig viure** a Girona.
 - Quan tenia deu anys **vam canviar** de pis.
 
-{{verb cantar passat-perifrastic}}
-
 ## Pretèrit indefinit — completed, in a period that includes *now*
+
+{{verb cantar preterit-indefinit}}
 
 **he / has / ha / hem / heu / han** + **participle**.
 
@@ -31,9 +33,9 @@ The rule of thumb: *ahir* → perifràstic, *avui* → indefinit. Same tense in 
 
 Regular participles: -ar → **-at** (cantat), -er/-re → **-ut** (perdut, begut), -ir → **-it** (dormit). Common irregulars: **fet, dit, vist, obert, escrit, mort, pres, après, entès, encès, cobert, ofert, vingut, tingut, pogut, volgut, sabut, estat (ser/estar), viscut, rebut, cregut**.
 
-{{verb cantar preterit-indefinit}}
-
 ## Imperfet — habits, descriptions, background
+
+{{verb cantar imperfet}}
 
 Endings: -ar → **-ava, -aves, -ava, -àvem, -àveu, -aven**; -er/-re/-ir → **-ia, -ies, -ia, -íem, -íeu, -ien**.
 
@@ -44,8 +46,6 @@ Use it for:
 1. **Habits** in the past — *abans, de petit, cada dia, sempre*: De petit **jugava** a futbol cada tarda.
 2. **Descriptions** (people, places, weather, age, time): **Feia** fred i **eren** les deu. La casa **era** molt gran.
 3. **Background** for another action: **Mentre sopava**, va trucar la Maria. (*sopava* = background, *va trucar* = event)
-
-{{verb cantar imperfet}}
 
 ## Side by side
 

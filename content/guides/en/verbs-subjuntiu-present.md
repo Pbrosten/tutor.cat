@@ -10,6 +10,8 @@ The subjunctive appears in a **subordinate clause** (after *que*) when the main 
 
 ## Forms
 
+{{verb tenir subjuntiu-present}}
+
 The endings swap vowel with the present indicative: -ar verbs take **-i**, everything else takes **-i** too, but from a different stem.
 
 | | cantar | perdre | dormir | servir (incoatiu) |
@@ -26,8 +28,6 @@ The endings swap vowel with the present indicative: -ar verbs take **-i**, every
 Irregular stems (the 1st person singular of the indicative usually gives the stem: tinc → tingui):
 
 **ser → sigui · estar → estigui · anar → vagi · fer → faci · tenir → tingui · venir → vingui · poder → pugui · voler → vulgui · saber → sàpiga · dir → digui · veure → vegi · haver → hagi · caldre → calgui · beure → begui · viure → visqui · conèixer → conegui · dur → dugui · treure → tregui**
-
-{{verb tenir subjuntiu-present}}
 
 ## When to use it (B1)
 

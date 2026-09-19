@@ -22,6 +22,8 @@ Els verbs purs en -ir són pocs: **dormir, sortir (surto), obrir (obro), omplir,
 
 ## Irregulars imprescindibles
 
+{{verb sortir present}}
+
 | | ser | estar | tenir | fer | anar | venir |
 |---|---|---|---|---|---|---|
 | jo | soc | estic | tinc | faig | vaig | vinc |
@@ -41,8 +43,6 @@ Els verbs purs en -ir són pocs: **dormir, sortir (surto), obrir (obro), omplir,
 | ells | poden | volen | saben | diuen | veuen | han |
 
 També: **conèixer** → conec, coneixes… · **viure** → visc, vius, viu, vivim, viviu, viuen · **beure** → bec, beus, beu, bevem, beveu, beuen · **escriure** → escric, escrius, escriu, escrivim, escriviu, escriuen · **dur** → duc, duus, duu · **caure** → caic · **riure** → ric.
-
-{{verb sortir present}}
 
 ## Usos
 

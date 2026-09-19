@@ -7,6 +7,8 @@ Al B1 fem servir tres passats constantment. Dos descriuen accions *acabades* i n
 
 ## Passat perifràstic — acabat, en un període que ja s'ha tancat
 
+{{verb cantar passat-perifrastic}}
+
 **vaig / vas / va / vam / vau / van** + **infinitiu**. L'auxiliar és *anar*, però no té res a veure amb desplaçar-se.
 
 Marcadors: **ahir, la setmana passada, l'any passat, fa dos dies, dissabte, el 2019, quan tenia deu anys**.
@@ -15,9 +17,9 @@ Marcadors: **ahir, la setmana passada, l'any passat, fa dos dies, dissabte, el 2
 - L'any passat **vaig viure** a Girona.
 - Quan tenia deu anys **vam canviar** de pis.
 
-{{verb cantar passat-perifrastic}}
-
 ## Pretèrit indefinit — acabat, en un període que inclou *ara*
+
+{{verb cantar preterit-indefinit}}
 
 **he / has / ha / hem / heu / han** + **participi**.
 
@@ -31,9 +33,9 @@ La regla pràctica: *ahir* → perifràstic, *avui* → indefinit. En anglès é
 
 Participis regulars: -ar → **-at** (cantat), -er/-re → **-ut** (perdut, begut), -ir → **-it** (dormit). Irregulars freqüents: **fet, dit, vist, obert, escrit, mort, pres, après, entès, encès, cobert, ofert, vingut, tingut, pogut, volgut, sabut, estat (ser/estar), viscut, rebut, cregut**.
 
-{{verb cantar preterit-indefinit}}
-
 ## Imperfet — hàbits, descripcions, rerefons
+
+{{verb cantar imperfet}}
 
 Terminacions: -ar → **-ava, -aves, -ava, -àvem, -àveu, -aven**; -er/-re/-ir → **-ia, -ies, -ia, -íem, -íeu, -ien**.
 
@@ -44,8 +46,6 @@ El fem servir per a:
 1. **Hàbits** del passat — *abans, de petit, cada dia, sempre*: De petit **jugava** a futbol cada tarda.
 2. **Descripcions** (persones, llocs, temps, edat, hora): **Feia** fred i **eren** les deu. La casa **era** molt gran.
 3. **Rerefons** d'una altra acció: **Mentre sopava**, va trucar la Maria. (*sopava* = rerefons, *va trucar* = fet)
-
-{{verb cantar imperfet}}
 
 ## Cara a cara
 

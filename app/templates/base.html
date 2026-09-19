@@ -36,9 +36,15 @@
     .conj table { font-size: .92rem; }
     .conj th:first-child { position: sticky; left: 0; background: var(--pico-background-color); }
     .conj thead th { white-space: nowrap; }
-    table.verb { width: auto; font-size: .88rem; float: right; margin: 0 0 1rem 1.5rem; }
+    table.verb { width: auto; font-size: .88rem; float: right; clear: right; margin: 0 0 1rem 1.5rem; }
     table.verb caption { font-weight: 600; caption-side: top; padding-bottom: .25rem; }
-    @media (max-width: 40rem) { table.verb { float: none; margin: 1rem 0; } }
+    /* a section with a verb table becomes two columns, so the table stays beside ITS text and never pushes the next one */
+    .sect:has(table.verb) { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 1.5rem; }
+    .sect:has(table.verb) > * { grid-column: 1; }
+    .sect:has(table.verb) > h2 { grid-column: 1 / -1; }
+    .sect > table.verb { grid-column: 2; grid-row: 2 / span 99; float: none; clear: none; align-self: start; margin: 0; }
+    @media (max-width: 40rem) { table.verb { float: none; margin: 1rem 0; }
+      .sect:has(table.verb) { display: block; } .sect > table.verb { margin: 1rem 0; } }
     /* exercises */
     ol.items { list-style: none; padding: 0; counter-reset: item; }
     ol.items > li { counter-increment: item; margin-bottom: .75rem; }
