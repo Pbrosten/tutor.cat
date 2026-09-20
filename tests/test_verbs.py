@@ -29,5 +29,27 @@ def test_conjugation():
     assert verbs.search("vaig")[0]["lemma"] == "anar"
 
 
+def test_segment():
+    from app import verbs
+    if not verbs.DB.exists():
+        return
+
+    def pres(lemma):
+        return verbs.segment(lemma, verbs.conjugation(lemma)["tables"])["indicatiu"]["present"]
+
+    # a regular verb: every ending split off the stem, nothing flagged
+    assert pres("cantar") == [("cant", e, False) for e in ("o", "es", "a", "em", "eu", "en")]
+    assert pres("dormir") == [("dorm", e, False) for e in ("o", "s", "", "im", "iu", "en")]
+    # incoatius pick the servir model over dormir, so -eix- counts as regular
+    assert pres("servir")[0] == ("serv", "eixo", False)
+    # irregular ending keeps the regular ending's length: tinc reads tin+c, not t+inc
+    assert pres("tenir")[0] == ("tin", "c", True)
+    assert pres("tenir")[1] == ("ten", "s", False)
+    # a regular ending on a suppletive stem is not an irregular ending
+    assert pres("ser")[1] == ("et", "s", False)
+    # compound tenses are left whole
+    assert verbs.segment("tenir", verbs.conjugation("tenir")["tables"])["indicatiu"]["pretèrit indefinit"][0] == ("he tingut", "", False)
+
+
 if __name__ == "__main__":
-    test_model_and_tag(); test_conjugation(); print("ok")
+    test_model_and_tag(); test_conjugation(); test_segment(); print("ok")

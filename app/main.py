@@ -75,6 +75,7 @@ def verb_page(request: Request, lemma: str, tot: bool = False, def_lang: str = "
     if not c:
         raise HTTPException(404)
     return templates.TemplateResponse(request, "verb.html", {"c": c, "all": tot, "persons": verbs.PERSONS,
+                                                             "seg": verbs.segment(lemma, c["tables"]),
                                                              "defs": definitions.get(lemma), "def_lang": "en" if def_lang == "en" else "ca"})
 
 

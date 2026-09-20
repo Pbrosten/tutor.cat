@@ -13,6 +13,7 @@
   <p class="muted"><small>Font: {% if def_lang == "en" %}<a href="https://en.wiktionary.org/wiki/{{ c.verb.lemma }}#Catalan">en.wiktionary.org</a>{% else %}<a href="https://ca.wiktionary.org/wiki/{{ c.verb.lemma }}">Viccionari</a>{% endif %} (CC BY-SA)</small></p>
 </section>
 <p>{% if all %}<a role="button" class="secondary" href="?{{ 'def_lang=en' if def_lang == 'en' }}">Mostra només els temps B1</a>{% else %}<a role="button" class="outline" href="?tot=1{{ '&def_lang=en' if def_lang == 'en' }}">Mostra tots els temps</a>{% endif %}</p>
+<p><small class="muted">Terminacions separades del radical: regular <span class="en">em</span>, <b>irregular</b> <span class="en irr">c</span>.</small></p>
 {% for mood, tenses in c.tables.items() if tenses %}
 <h2>{{ mood|capitalize }}</h2>
 <div class="conj"><table class="striped">
@@ -20,7 +21,7 @@
   <tbody>
   {% for p in persons %}
   {% set i = loop.index0 %}
-  <tr><th>{{ p }}</th>{% for forms in tenses.values() %}<td>{{ forms[i] }}</td>{% endfor %}</tr>
+  <tr><th>{{ p }}</th>{% for t in tenses %}{% set st, en, irr = seg[mood][t][i] %}<td>{{ st }}{% if en %}<span class="en{{ ' irr' if irr }}">{{ en }}</span>{% endif %}</td>{% endfor %}</tr>
   {% endfor %}
   </tbody>
 </table></div>

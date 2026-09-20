@@ -92,3 +92,47 @@ def conjugation(lemma, all_tenses=False):
         "participi": " / ".join(part.get(k, ["—"])[0] for k in [("0", "S", "M"), ("0", "S", "F"), ("0", "P", "M"), ("0", "P", "F")]),
     }
     return {"verb": dict(verb), "tables": tables, "nonfinite": nonfinite}
+
+
+# --- ending segmentation (conjugador only): stem + ending, ending bold when it isn't the regular one
+# perdre, not the usual model témer: its stem survives a naive lemma[:-2] split ('témer' -> 'tém' vs forms 'temo').
+REFS = {"ar": ("cantar",), "er": ("perdre",), "re": ("perdre",), "ir": ("dormir", "servir")}
+
+
+@lru_cache(maxsize=8)
+def _ref_endings(ref):
+    """{(mood, tense, person_index): regular ending} read off a model verb. Compound tenses drop out
+    on their own: 'vaig cantar' doesn't start with the stem, so those slots get no entry."""
+    stem = ref[:-2]
+    return {(mood, tense, i): f[len(stem):]
+            for mood, tenses in conjugation(ref, all_tenses=True)["tables"].items()
+            for tense, forms in tenses.items()
+            for i, f in enumerate(forms) if f.startswith(stem)}
+
+
+def _at(tables, mood, tense, i):
+    forms = tables.get(mood, {}).get(tense, ())
+    return forms[i] if i < len(forms) else None
+
+
+def _split(form, stem, ending):
+    """(stem, ending, irregular). An irregular form keeps the regular ending's *length*, so 'tinc'
+    reads tin+c rather than t+inc. ponytail: a heuristic — forms shorter than their ending
+    ('té', 'és') are left whole rather than guessed at."""
+    if ending is None or " " in form or form == "—":
+        return form, "", False
+    if form.endswith(ending) and len(form) > len(ending):
+        return form[:len(form) - len(ending)], ending, False   # regular ending; the stem may still be irregular
+    if ending and len(form) > len(ending):
+        return form[:-len(ending)], form[-len(ending):], True
+    return form, "", True
+
+
+def segment(lemma, tables):
+    """Same shape as conjugation()['tables'], each form replaced by (stem, ending, irregular)."""
+    stem = lemma[:-2]
+    refs = [_ref_endings(r) for r in REFS.get(lemma[-2:], ("cantar",))]
+    reg = max(refs, key=lambda e: sum(_at(tables, m, t, i) == stem + v for (m, t, i), v in e.items()))
+    return {mood: {tense: [_split(f, stem, reg.get((mood, tense, i))) for i, f in enumerate(forms)]
+                   for tense, forms in tenses.items()}
+            for mood, tenses in tables.items()}
