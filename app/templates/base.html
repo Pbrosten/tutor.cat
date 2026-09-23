@@ -180,15 +180,15 @@
   {% endfor %}</div>{% endif %}
   <div id="vtip" class="vtip" hidden></div>
   <script>
-  // Definition tooltip for any <span class="vf" data-lemma> (verb forms in guides and exercises). Fetched once per lemma set.
+  // Definition tooltip for any <span class="vf" data-w="lemma:pos,…"> (words in guides and exercises). Fetched once per word.
   (() => {
     const tip = document.getElementById("vtip"), cache = {};
     let cur = null, hideT = null;
     const place = el => { const r = el.getBoundingClientRect(), w = Math.min(360, innerWidth - 24);
       tip.style.width = w + "px"; tip.style.left = Math.max(12, Math.min(r.left, innerWidth - w - 12)) + scrollX + "px";
       tip.style.top = (r.bottom + 6 + scrollY) + "px"; };
-    const show = async el => { cur = el; clearTimeout(hideT); const k = el.dataset.lemma;
-      if (!cache[k]) cache[k] = fetch("/verbs/tip/" + encodeURIComponent(k)).then(r => r.ok ? r.text() : "");
+    const show = async el => { cur = el; clearTimeout(hideT); const k = el.dataset.w;
+      if (!cache[k]) cache[k] = fetch("/tip/" + encodeURIComponent(k)).then(r => r.ok ? r.text() : "");
       const html = await cache[k]; if (cur !== el || !html) return;
       tip.innerHTML = html; tip.hidden = false; place(el); };
     const hide = () => { hideT = setTimeout(() => { tip.hidden = true; cur = null; }, 250); };

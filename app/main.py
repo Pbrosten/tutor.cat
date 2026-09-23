@@ -60,13 +60,13 @@ def _results(q):
     return {"q": q, "hits": verbs.search(q), "ids": verbs.identify(q)}
 
 
-@app.get("/verbs/tip/{lemmas}")
-def verb_tip(request: Request, lemmas: str):
-    """Tooltip body: definitions (ca + en) for one or more comma-separated lemmas."""
-    items = [(l, definitions.get(l)) for l in lemmas.split(",")[:3] if verbs.conjugation(l)]
+@app.get("/tip/{words}")
+def word_tip(request: Request, words: str):
+    """Tooltip body: definitions (ca) for up to three comma-separated 'lemma:pos' readings (see tips.py)."""
+    items = [(l, p, definitions.get(l, p)) for l, _, p in (w.partition(":") for w in words.split(",")[:3]) if verbs.is_lemma(l, p)]
     if not items:
         raise HTTPException(404)
-    return templates.TemplateResponse(request, "tip.html", {"items": items})
+    return templates.TemplateResponse(request, "tip.html", {"items": items, "POS": verbs.POS})
 
 
 @app.get("/verbs/{lemma}")

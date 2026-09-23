@@ -1,6 +1,7 @@
-{% for lemma, d in items %}
+{% for lemma, pos, d in items %}
 <div class="tipverb">
-  <a href="/verbs/{{ lemma }}"><b>{{ lemma }}</b> <small class="muted">→ definició completa</small></a>
+  {% if pos == "v" %}<a href="/verbs/{{ lemma }}"><b>{{ lemma }}</b> <small class="muted">{{ POS[pos] }} → conjugació</small></a>
+  {% else %}<b>{{ lemma }}</b> <small class="muted">{{ POS[pos] }}</small>{% endif %}
   {% if d.ca %}<ol>{% for x in d.ca[:3] %}<li>{{ x }}</li>{% endfor %}</ol>
   {% else %}<p class="muted">Sense definició al Viccionari.</p>{% endif %}
 </div>

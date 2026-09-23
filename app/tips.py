@@ -1,6 +1,6 @@
-"""Wrap verb forms in running text with <span class="vf" data-lemma="…"> so the page can show a definition tooltip.
-ponytail: a stoplist of function words keeps 'la', 'que', 'per' quiet; other homographs ('casa', 'porta') still get a
-(harmless) tooltip — the alternative is a POS tagger."""
+"""Wrap dictionary words (verb forms, nouns, adjectives, adverbs) in running text with <span class="vf" data-w="lemma:pos,…">
+so the page can show a definition tooltip. ponytail: a stoplist of function words keeps 'la', 'que', 'per' quiet; homographs
+('casa' noun/verb) just list every reading — the alternative is a POS tagger."""
 import re
 from html import escape
 
@@ -19,10 +19,12 @@ def _wrap(m):
     low = w.lower()
     if len(low) < 2 or low in STOP or low.replace("'", "").replace("’", "") in STOP:
         return w
-    lemmas = verbs.lemmas_of(low)
-    if not lemmas:
+    if w[0].isupper() and m.string[:m.start()].rstrip()[-1:] not in ("", ".", "!", "?", ":"):
+        return w   # capitalised mid-sentence = a name ('la Maria', not the noun 'maria')
+    hits = verbs.lookup(low)
+    if not hits:
         return w
-    return f'<span class="vf" data-lemma="{",".join(lemmas)}">{w}</span>'
+    return f'<span class="vf" data-w="{",".join(f"{l}:{p}" for l, p in hits)}">{w}</span>'
 
 
 def annotate_html(html):

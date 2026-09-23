@@ -38,11 +38,21 @@ def search(q, limit=20):
             (q + "%", q, q, limit))]
 
 
+POS = {"v": "verb", "nm": "nom m.", "nf": "nom f.", "nc": "nom m./f.", "a": "adjectiu", "r": "adverbi"}
+
+
 @lru_cache(maxsize=20000)
-def lemmas_of(form):
-    """Distinct lemmas a surface form belongs to ('casa' -> ('casar',)); () if it isn't a verb form."""
+def lookup(form):
+    """(lemma, pos) pairs a surface form belongs to: 'casa' -> (('casa', 'nf'), ('casar', 'v')); () if unknown."""
     with db() as con:
-        return tuple(r[0] for r in con.execute("SELECT DISTINCT lemma FROM forms WHERE form = ? ORDER BY lemma", (form,)))
+        return tuple(map(tuple, con.execute("""SELECT DISTINCT lemma, 'v' FROM forms WHERE form = ?
+                                               UNION SELECT lemma, pos FROM words WHERE form = ? ORDER BY 1, 2""", (form, form))))
+
+
+def is_lemma(lemma, pos):
+    with db() as con:
+        return bool(con.execute("SELECT 1 FROM verbs WHERE lemma = ?" if pos == "v" else
+                                "SELECT 1 FROM words WHERE lemma = ? AND pos = ? LIMIT 1", (lemma,) if pos == "v" else (lemma, pos)).fetchone())
 
 
 def identify(form):

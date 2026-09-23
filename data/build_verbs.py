@@ -1,4 +1,5 @@
-"""One-shot: Softcatalà catalan-dict-tools -> data/verbs.sqlite (central Catalan only).
+"""One-shot: Softcatalà catalan-dict-tools -> data/verbs.sqlite (central Catalan only), plus a `words` table
+(nouns, adjectives, adverbs: form -> lemma, pos) from the full-form LanguageTool dictionary, for the tooltips.
 
     docker compose run --rm app python data/build_verbs.py
 """
@@ -20,6 +21,9 @@ CENTRAL = set("0CYX12")
 
 MOOD = {"I": "indicatiu", "S": "subjuntiu", "M": "imperatiu", "N": "infinitiu", "G": "gerundi", "P": "participi"}
 TENSE = {"P": "present", "I": "imperfet", "F": "futur", "S": "passat simple", "C": "condicional", "0": ""}
+# LT tag prefix -> our pos. NC = common noun (3rd char = gender), AQ/AO = adjective, RG = adverb. Proper nouns and function
+# words skipped: the former need no definition, the latter are on the tips stoplist anyway.
+WORD_POS = {"NC": "n", "AQ": "a", "AO": "a", "RG": "r"}
 
 
 def apply_model(infinitive, strip, add):
@@ -46,7 +50,7 @@ def load_dict():
     tar = tarfile.open(fileobj=io.BytesIO(fetch(DICT_URL)))
     files = {}
     for m in tar:
-        if "/diccionari-arrel/verbs-fdic.txt" in m.name or "/models-verbals/" in m.name and m.name.endswith(".model") or m.name.endswith("frequencies-dict-lemmas.txt"):
+        if "/diccionari-arrel/verbs-fdic.txt" in m.name or "/models-verbals/" in m.name and m.name.endswith(".model") or m.name.endswith(("frequencies-dict-lemmas.txt", "resultats/lt/diccionari.txt")):
             files[m.name.split("/")[-1]] = tar.extractfile(m).read().decode("utf-8")
     return files
 
@@ -74,6 +78,13 @@ def main():
             if tag[7] in CENTRAL and form not in old:
                 forms.append((lemma, *decode(tag), form))
 
+    words = set()
+    for line in files["diccionari.txt"].splitlines():
+        form, lemma, tag = line.split(" ")[:3]
+        pos = WORD_POS.get(tag[:2])
+        if pos and form == form.lower():
+            words.add((form, lemma, pos + tag[2].lower() if pos == "n" else pos))   # nf / nm / nc, a, r
+
     out = DATA / "verbs.sqlite"
     out.unlink(missing_ok=True)
     db = sqlite3.connect(out)
@@ -82,11 +93,15 @@ def main():
         CREATE TABLE forms(lemma TEXT, mood TEXT, tense TEXT, person TEXT, number TEXT, gender TEXT, form TEXT);
         CREATE INDEX forms_lemma ON forms(lemma);
         CREATE INDEX forms_form ON forms(form);
+        CREATE TABLE words(form TEXT, lemma TEXT, pos TEXT);
+        CREATE INDEX words_form ON words(form);
+        CREATE INDEX words_lemma ON words(lemma, pos);
     """)
     db.executemany("INSERT INTO verbs VALUES (?,?,?,?)", verbs)
     db.executemany("INSERT INTO forms VALUES (?,?,?,?,?,?,?)", forms)
+    db.executemany("INSERT INTO words VALUES (?,?,?)", sorted(words))
     db.commit()
-    print(f"{len(verbs)} verbs, {len(forms)} forms -> {out}")
+    print(f"{len(verbs)} verbs, {len(forms)} forms, {len(words)} words -> {out}")
 
 
 if __name__ == "__main__":
